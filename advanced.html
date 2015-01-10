@@ -64,19 +64,19 @@
 
 	<div class="container">
 
-		<p class="version">Version 2.0.0</p>
+		<p class="version">Version 2.0.2</p>
 	
 		<div class="topmenu">
 		
 			<ul>
 		
-				<li><a href="index.html" target="_blank">Start Here</a></li>
-				<li><a href="normal.html" target="_blank">Normal</a></li>
-				<li id="current"><a href="advanced.html" target="_blank">Advanced</a></li>
-				<li><a href="help.html" target="_blank">Help</a></li>
-				<li><a href="faq.html" target="_blank">FAQ</a></li>
-				<li><a href="about.html" target="_blank">About</a></li>
-				<li><a href="copying.html" target="_blank">Copying</a></li>
+				<li><a href="index.html">Start Here</a></li>
+				<li><a href="normal.html">Normal</a></li>
+				<li id="current"><a href="advanced.html">Advanced</a></li>
+				<li><a href="help.html">Help</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="copying.html">Copying</a></li>
 
 			</ul>
 
@@ -84,7 +84,7 @@
 
 		<h1>Advanced - Border Router Security Tool (BRST)</h1>
 
-		<p class="bold-paragraph">"Securing the Internet one router at a time."</p>
+		<p class="catch-phrase">"Securing the Internet one router at a time."</p>
 
 		<p>Advanced configuration page - lets you choose all of your options.</p>
 
@@ -466,9 +466,9 @@
 				
 				<div class="section">
 				
-					<h3>Null Interface</h3>
+					<h3>Null Interface and Null Routing</h3>
 					
-					<p>Select whether to create a null interface (used for null, or "black hole" routing of unwanted traffic).</p>
+					<p>Select whether to create a null interface (used for null, or "black hole" routing of unwanted traffic), and configure null routing.</p>
 					
 					<div class="group">
 					
@@ -478,7 +478,13 @@
 					
 					</div>
 					
+					<div class="group">
+					
+					<p><label><input name="checkbox_null_route" type="checkbox" value="checked" checked />Configure <a href="help.html#null_route" target="_blank">null routing</a> to be used to dispose of invalid traffic.</label>
+					
 					</div>
+					
+				</div>
 				
 				<div class="section">
 				
@@ -489,6 +495,12 @@
 						<div class="group">
 						
 							<h4>Loopback Interface</h4>
+							
+							<div class="singlequestion">
+							
+								<label><input class="text_input" name="checkbox_loopback" type="checkbox" value="checked" checked />Create a <a href="help.html#loopback" target="_blank">Loopback Interface</a></label>
+							
+							</div>
 							
 							<p>Enter an IP address for your loopback interface (if you don't know, enter 127.0.0.1).</p>
 							
@@ -512,6 +524,13 @@
 
 							<div class="singlequestion">
 							
+								Enable NTP:
+								<label><input class="text_input" name="checkbox_ntp_config" type="checkbox" value="checked" checked /></label>
+							
+							</div>
+							
+							<div class="singlequestion">
+							
 								NTP Server 1: 
 								<input class="text_input" type="text" name="ntp_svr1_ip1" size="3" maxlength="3" /> . 
 								<input class="text_input" type="text" name="ntp_svr1_ip2" size="3" maxlength="3" /> . 
@@ -532,9 +551,25 @@
 
 						</div>
 						
+					</div>
+						
+					<div class="section">
+						
+						<h4>Securing Access</h4>
+						
 						<div class="group">
 						
-							<h4>Remote Access</h4>
+							<h4>Configure Access, Authentication, and Authorization (AAA)</h4>
+							
+							<p>Enable AAA to be able to view the actions of users.</p>
+							
+							<label><input  class="text_input" name="checkbox_aaa" type="checkbox" value="checked" checked />Configure <a href="help.html#cmd_aaa" target="_blank">Local AAA</a>.</label>
+						
+						</div>
+						
+						<div class="group">
+						
+							<h4>Remote Access Computer</h4>
 							
 							<p>Enter the IP address of a trusted computer you will use to access the router remotely.</p>
 							
@@ -551,26 +586,100 @@
 						</div>
 						
 						<div class="group">
+
+							<h4>Disable Aux Port</h4>
+								
+							<p>The auxiliary port, if your router has one, is normally not needed and should be disabled. Uncheck this if your router does not have an aux port.</p>
 						
-							<h4>User Information</h4>
-							
-							<p>Enter a username and password (change the username and password in the text file you receive prior to loading into the router).</p>
-							
 							<div class="singlequestion">
 							
-								Username: <input class="text_input" type="text" name="username" size="25" maxlength="25" placeholder="Change before use..." />
+								<label><input class="text_input" name="checkbox_aux" type="checkbox" value="checked" />Disable <a href="help.html#aux">aux port</a>.</label>
+							
+							</div>
+						
+						</div>
+						
+						<div class="group">
+						
+							<h4>Console Port</h4>
+							
+							<p>The console port is used to access the router locally using a serial connection and terminal emulation software like Putty or TeraTerm.</p>
 
+							<label><input class="text_input" name="checkbox_console" type="checkbox" value="checked" checked />Configure <a href="help.html#console" target="_blank">console port</a>.</label>
+						
+						</div>
+						
+						<div class="group">
+						
+							<h4>VTY Port</h4>
+							
+							<p>The virtual terminal (vty) ports are used to connect to the router with remote access protocols like SSH.</p>
+							
+							<label><input class="text_input" name="checkbox_vty" type="checkbox" value="checked" checked />Secure <a href="help.html#vty" target="_blank">vty ports</a>.</label>
+						
+						</div>
+						
+						<div class="group">
+						
+							<h4>Access Control Lists (ACL's)</h4>
+							
+							<p>Create inside and outside access control lists to control traffic flow to and through the router.</p>
+						
+							<div class="singlequestion">
+							
+								<label><input class="text_input" name="checkbox_outside_acl" type="checkbox" value="checked" checked />Create <a href="help.html#outside_acl" target="_blank">Outside ACL</a>.</label>
+							
+							</div>
+
+							<div class="singlequestion">
+								
+									<label><input name="checkbox_inside_acl" type="checkbox" value="checked" checked />Create <a href="help.html#inside_acl" target="_blank">Inside ACL</a>.</label>
+								
 							</div>
 							
+						</div>
+						
+						<div class="group">
+						
+						<h4>Restricting Command Access</h4>
+						
+						<p>Some commands that are available to all user levels should be restricted to administrator level.</p>
+						
 							<div class="singlequestion">
-							
-								Password: <input class="text_input" type="text" name="u_password" size="25" maxlength="25" placeholder="Change before use..." />
+
+								<label><input name="checkbox_cmd_access" type="checkbox" value="checked" checked />Restrict Access to <a href="help.html#cmd_access" target="_blank">High Risk Commands</a>.</label>
 							
 							</div>
 						
 						</div>
 					
-				</div>
+					</div>
+						
+					<div class="group">
+					
+						<h4>User Information</h4>
+						
+						<p>Enter a username and password (change the username, password, and enable secret password in the text file you receive prior to loading into the router).</p>
+						
+						<div class="singlequestion">
+						
+							Username: <input class="text_input" type="text" name="username" size="25" maxlength="25" placeholder="Change before use..." />
+
+						</div>
+						
+						<div class="singlequestion">
+						
+							Password: <input class="text_input" type="password" name="u_password" size="25" maxlength="25" placeholder="Change before use..." />
+						
+						</div>
+						
+						<div class="singlequestion">
+						
+							Enable Secret Password:  <input class="text_input" type="password" name="enable_secret_pw" size="25" maxlength="25" placeholder="Change before use..." />
+						
+						</div>
+					
+					</div>
 				
 				<div class="section">
 				
@@ -656,7 +765,7 @@
 					
 					</div>
 					
-				</div>	
+				</div>				
 					
 				<input class="submit_input" type="submit" name="submit" value="Submit">
 				
@@ -669,7 +778,7 @@
 			<a href="http://sourceforge.net/projects/borderroutersec">
 			<img  class="repo-logo" src="http://sflogo.sourceforge.net/sflogo.php?group_id=304482&amp;type=12"
 			width="120" height="30" alt="Get BRST - Border Router Security Tool at
-			SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
+			SourceForge.net." /></a>
 			
 			<h3>Disclaimer and Licensing</h3>
 			

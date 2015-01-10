@@ -19,26 +19,28 @@
 
 	<div class="container">
 
-		<p class="version">Version 2.0.0</p>
+		<p class="version">Version 2.0.2</p>
 	
 		<div class="topmenu">
 		
 			<ul>
 		
-				<li id="current"><a href="index.html" target="_blank">Main</a></li>
-				<li><a href="advanced.html" target="_blank">Advanced</a></li>
-				<li><a href="help.html" target="_blank">Help</a></li>
-				<li><a href="about.html" target="_blank">About</a></li>
-				<li><a href="faq.html" target="_blank">FAQ</a></li>
-				<li><a href="copying.html" target="_blank">Copying</a></li>
+				<li><a href="index.html">Start Here</a></li>
+				<li><a href="normal.html">Normal</a></li>
+				<li><a href="advanced.html">Advanced</a></li>
+				<li id="current"><a href="config.html">Config File</a></li>
+				<li><a href="help.html">Help</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="copying.html">Copying</a></li>
 
 			</ul>
 
 		</div>
-
+		
 		<h1>Secure Configuration File - Border Router Security Tool (BRST)</h1>
 
-		<p class="bold-paragraph">"Securing the Internet one router at a time."</p>
+		<p class="catch-phrase">"Securing the Internet one router at a time."</p>
 
 		<p>The section below represents the secure configuration file which you can paste into your router.</p>
 
@@ -78,9 +80,9 @@
 
 		echo "<h1>!WARNING!</h1>";
 		echo "<h2>! You did not properly enter a code version.</h2><br />";
-		echo "<h2>! The crst needs the code version to generate a configuration file.</h2><br />";
-		echo "<b>! Please return to the crst main page and enter the code version.<b><br />";
-		echo "<b>! You can obtain the code version by typing the show version command at the enable prompt.<b><br />";
+		echo "<h2>! The brst needs the code version to generate a configuration file.</h2><br />";
+		echo "<b>! Please return to the brst main page and enter the code version.</b><br />";
+		echo "<b>! You can obtain the code version by typing the show version command at the enable prompt.</b><br />";
 
 		}
 
@@ -89,8 +91,8 @@
 
 		echo "<h1>!WARNING!</h1>";
 		echo "<h2>! Your code is too old.</h2><br />";
-		echo "<h2>! The crst needs a code version newer than 11 to generate a valid configuration file.</h2><br />";
-		echo "<b>! Please obtain a newer code version by purchasing a newer router or code version.<b><br />";
+		echo "<h2>! The brst needs a code version newer than 11 to generate a valid configuration file.</h2><br />";
+		echo "<b>! Please obtain a newer code version by purchasing a newer router or code version.</b><br />";
 
 		}
 
@@ -271,91 +273,91 @@
 			echo "<b>!Section 1a: Unneeded Global Services</b><br />";
 			echo "!<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_boot"] == "checked" ) {
+			if (( $_POST["normal"] == "yes" ) || ( $_POST["checkbox_boot"] == "checked" )) {
 
 			echo "no boot network<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_cdp"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_cdp"] == "checked" )) {
 
 			echo "no cdp run<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_svc"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_svc"] == "checked" )) {
 
 			echo "no service config<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_dhcp"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_dhcp"] == "checked" )) {
 
 			echo "no service dhcp<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_pad"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_pad"] == "checked" )) {
 
 			echo "no service pad<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_finger"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_finger"] == "checked" )) {
 
 			echo "no ip finger<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_grat_arps"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_grat_arps"] == "checked" )) {
 
 			echo "no ip gratuitous-arps<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_http"] == "checked" )  {
+			if (( $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_http"] == "checked" ))  {
 
 			echo "no ip http server<br />";
 
 			}
 
-			if ( (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_http_sec"] == "checked" ) && ( $_POST["radio_encryption"] == "yes" ) ){
+			if (( (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_http_sec"] == "checked" )) && ( $_POST["radio_encryption"] == "yes" )){
 
 			echo "no ip http secure-server<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_name_srv"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_name_srv"] == "checked" )) {
 
 			echo "no ip name-server<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_src_rt"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_src_rt"] == "checked" )) {
 
 			echo "no ip source-route<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_lldp"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_lldp"] == "checked" )) {
 
 			echo "no lldp run<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_tcp_ss"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_tcp_ss"] == "checked" )) {
 
 			echo "no service tcp-small-servers<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_udp_ss"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_udp_ss"] == "checked" )) {
 
 			echo "no service udp-small-servers<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_ip_options"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_ip_options"] == "checked" )) {
 
 			echo "ip options drop<br />";
 
@@ -373,49 +375,49 @@
 			echo "ip address " . $_POST["wan_int_ip1"] . "." . $_POST["wan_int_ip2"] . "." . $_POST["wan_int_ip3"] . "." . $_POST["wan_int_ip4"] . "
 			 " . $_POST["wan_int_mask1"] . "." . $_POST["wan_int_mask2"] . "." . $_POST["wan_int_mask3"] . "." . $_POST["wan_int_mask4"] . "<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_cdp_ena"] == "checked" ) {
+			if (( $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_cdp_ena"] == "checked" )) {
 
 			echo "no cdp enable<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_ip_bcast"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_ip_bcast"] == "checked" )) {
 
 			echo "no ip directed-broadcast<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_redirects"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_redirects"] == "checked" )) {
 
 			echo "no ip redirect<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_proxy_arp"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_proxy_arp"] == "checked" )) {
 
 			echo "no ip proxy-arp<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_mask_reply"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_mask_reply"] == "checked" )) {
 
 			echo "no ip mask-reply<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_unreachables"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_unreachables"] == "checked" )) {
 
 			echo "no ip unreachables<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_mop"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_mop"] == "checked" )) {
 
 			echo "no mop enabled<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_ntp"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_wan_ntp"] == "checked" )) {
 
 				//Check for router models that only support Simple Network Time Protocol (sntp).
 				if (($_POST["hardware_version"] >= "1600") && ($_POST["hardware_version"]<= "1699")
@@ -446,49 +448,49 @@
 			echo "ip address " . $_POST["firewall_int_ip1"] . "." . $_POST["firewall_int_ip2"] . "." . $_POST["firewall_int_ip3"] . "." . $_POST["firewall_int_ip4"] . "
 			 " . $_POST["firewall_int_mask1"] . "." . $_POST["firewall_int_mask2"] . "." . $_POST["firewall_int_mask3"] . "." . $_POST["firewall_int_mask4"] . "<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_cdp_ena"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_cdp_ena"] == "checked" )) {
 
 			echo "no cdp enable<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_ip_bcast"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_ip_bcast"] == "checked" )) {
 
 			echo "no ip directed-broadcast<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_redirects"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_redirects"] == "checked" )) {
 
 			echo "no ip redirect<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_proxy_arp"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_proxy_arp"] == "checked" )) {
 
 			echo "no ip proxy-arp<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_mask_reply"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_mask_reply"] == "checked" )) {
 
 			echo "no ip mask-reply<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_unreachables"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_unreachables"] == "checked" )) {
 
 			echo "no ip unreachables<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_mop"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_mop"] == "checked" )) {
 
 			echo "no mop enabled<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_ntp"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_fw_ntp"] == "checked" )) {
 
 				//Check for router models that only do Simple Network Time Protocol (sntp).
 				if (($_POST["hardware_version"] >= "1600") && ($_POST["hardware_version"]<= "1699")
@@ -518,37 +520,37 @@
 			echo "<b>!Section 2a: Recommended Global Services</b><br />";
 			echo "!<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_cef"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_cef"] == "checked" )) {
 
 			echo "ip cef<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_tcp_keepalives_in"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_tcp_keepalives_in"] == "checked" )) {
 
 			echo "service tcp-keepalives-in<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_tcp_keepalives_out"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_tcp_keepalives_out"] == "checked" )) {
 
 			echo "service tcp-keepalives-out<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_pw_encryption"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_pw_encryption"] == "checked" )) {
 
 			echo "service password-encryption<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_subnet_zero"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_subnet_zero"] == "checked" )) {
 
 			echo "ip subnet-zero<br />";
 
 			}
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_ip_classless"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_ip_classless"] == "checked" )) {
 
 			echo "ip classless<br />";
 
@@ -560,7 +562,7 @@
 			echo "<b>!Section 2c: Loopback Interface</b><br />";
 			echo "!<br />";
 
-			if ($_POST["checkbox_loopback"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || ($_POST["checkbox_loopback"] == "checked" )) {
 
 				//Make sure Loopback IP ! Null
 				if  ( ( $_POST["loopback_ip1"] == "" ) || ( $_POST["loopback_ip2"] == "") || ( $_POST["loopback_ip3"] == "") || ( $_POST["loopback_ip4"] == "") ){
@@ -602,7 +604,7 @@
 			echo "<b>!Section 2d: Null Interface</b><br />";
 			echo "!<br />";
 
-			if ($_POST["checkbox_null"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || ($_POST["checkbox_null"] == "checked" )) {
 			echo "interface null 0<br />";
 			echo "no ip unreachables<br />";
 			echo "exit<br />";
@@ -613,7 +615,7 @@
 			echo "<b>!Section 2e: Configure Network Time Protocol</b><br />";
 			echo "!<br />";
 
-			if ($_POST["checkbox_ntp_config"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || ($_POST["checkbox_ntp_config"] == "checked" )) {
 
 				//Make sure NTP Server 1's IPs are ! Null
 				if  ( ( $_POST["ntp_svr1_ip1"] == "" ) || ( $_POST["ntp_svr1_ip2"] == "") || ( $_POST["ntp_svr1_ip3"] == "") || ( $_POST["ntp_svr1_ip4"] == "") ){
@@ -652,7 +654,7 @@
 				else{
 
 					//If loopback is configured, use it as ntp source
-					if ( $_POST["checkbox_loopback"] == "checked" ){
+					if ((  $_POST["normal"] == "yes"   ) || ( $_POST["checkbox_loopback"] == "checked" )){
 
 					echo "ntp source loopback 0<br />";
 
@@ -718,7 +720,7 @@
 			echo "<b>!Section 3b: Auxilliary Port</b><br />";
 			echo "!<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_aux"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_aux"] == "checked" )) {
 			echo "line aux 0<br />";
 			echo "no exec<br />";
 			echo "login ctrlc-disable<br />";
@@ -734,7 +736,7 @@
 			echo "! Disable Aux Port was unchecked<br />";
 			echo "! If you have an Aux Port, but do not<br />";
 			echo "! need it enabled, check the box<br />";
-			echo "! and rerun crst.<br />";
+			echo "! and rerun brst.<br />";
 			echo "!<br />";
 
 			}
@@ -742,7 +744,7 @@
 			echo "<b>!Section 3c: Console Port</b><br />";
 			echo "!<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_console"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_console"] == "checked" )) {
 			echo "line con 0<br />";
 			echo "logging synchronous<br />";
 			echo "transport output none<br />";
@@ -754,7 +756,7 @@
 			echo "<b>!Section 3d: Virtual Terminal (vty) Ports</b><br />";
 			echo "!<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_vty"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_vty"] == "checked" )) {
 
 				if (( $_POST["radio_encryption"] == "yes" )  &&  (( $_POST["ver_major_release"] >= "12" ) && ( $_POST["ver_maint_release"] >= "2" ) && ( $_POST["ver_maint_revision"] >= "14" )) || ( $_POST["radio_encryption"] == "yes" )  &&  (( $_POST["ver_major_release"] >= "12" ) && ( $_POST["ver_maint_release"] >= "3" ))) {
 
@@ -795,7 +797,7 @@
 			echo "<b>!Section 3e: Restricting Command Access</b><br />";
 			echo "!<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_cmd_access"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_cmd_access"] == "checked" )) {
 			echo "privilege exec level 15 connect<br />";
 			echo "privilege exec level 15 telnet<br />";
 			echo "privilege exec level 15 rlogin<br />";
@@ -817,7 +819,7 @@
 			echo "<b>!Section 3f: AAA Access Control</b><br />";
 			echo "!<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_aaa"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_aaa"] == "checked" )) {
 			echo "aaa new-model<br />";
 			echo "aaa authentication login default local<br />";
 
@@ -989,7 +991,7 @@
 			echo "<b>! http://www.cymru.com/Documents/bogon-list.html</b><br />";
 			echo "<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_null_route"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_null_route"] == "checked" )) {
 			echo "ip route 0.0.0.0 255.0.0.0 null0<br />";
 
 			if (  $subnet10 == "1" ){
@@ -1048,7 +1050,7 @@
 			echo "<b>!Section 4b: Internet Facing (Outside) ACL</b><br />";
 			echo "!<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_outside_acl"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_outside_acl"] == "checked" )) {
 			echo "no ip access-list extended inet_in<br />";
 			echo "ip access-list extended inet_in<br />";
 
@@ -1101,7 +1103,7 @@
 			echo "<b>!Section 4c: Firewall Facing (Inside) ACL</b><br />";
 			echo "!<br />";
 
-			if (  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_inside_acl"] == "checked" ) {
+			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_inside_acl"] == "checked" )) {
 
 			echo "no ip access-list extended firewall_in<br />";
 			echo "ip access-list extended firewall_in<br />";
@@ -1346,14 +1348,15 @@
 
 			echo "<small>! BRST - Border Router Security Tool, Helps administrators </small><br />";
 			echo "<small>! secure their border routers.</small><br />";
-			echo "<small>! Copyright &copy; 2008 Ted LeRoy</small></p><br />";
+			echo "<small>! Copyright &copy; 2015 Ted LeRoy</small></p><br />";
 
 			}
+			
+			echo "<h2>! Stop Copying Config File Here !</h2>";
 
 		}
 
 		?>
-		<h2>! Stop Copying Config File Here !</h2>
 
 		</main>
 			
@@ -1362,7 +1365,7 @@
 			<a href="http://sourceforge.net/projects/borderroutersec">
 			<img  class="repo-logo" src="http://sflogo.sourceforge.net/sflogo.php?group_id=304482&amp;type=12"
 			width="120" height="30" alt="Get BRST - Border Router Security Tool at
-			SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
+			SourceForge.net." /></a>
 			
 			<h3>Disclaimer and Licensing</h3>
 			

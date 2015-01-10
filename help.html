@@ -11,7 +11,7 @@
 	<![endif]--> 
 	<meta charset="utf-8" />
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta id="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 </head>
 
@@ -19,19 +19,19 @@
 
 	<div class="container">
 
-		<p class="version">Version 2.0.0</p>
+		<p class="version">Version 2.0.2</p>
 	
 		<div class="topmenu">
 		
 			<ul>
 		
-				<li><a href="index.html" target="_blank">Start Here</a></li>
-				<li><a href="normal.html" target="_blank">Normal</a></li>
-				<li><a href="advanced.html" target="_blank">Advanced</a></li>
-				<li id="current"><a href="help.html" target="_blank">Help</a></li>
-				<li><a href="faq.html" target="_blank">FAQ</a></li>
-				<li><a href="about.html" target="_blank">About</a></li>
-				<li><a href="copying.html" target="_blank">Copying</a></li>
+				<li><a href="index.html">Start Here</a></li>
+				<li><a href="normal.html">Normal</a></li>
+				<li><a href="advanced.html">Advanced</a></li>
+				<li id="current"><a href="help.html">Help</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="copying.html">Copying</a></li>
 
 			</ul>
 
@@ -39,7 +39,7 @@
 		
 		<h1>Help - Border Router Security Tool (BRST)</h1>
 
-		<p class="bold-paragraph">"Securing the Internet one router at a time."</p>
+		<p class="catch-phrase">"Securing the Internet one router at a time."</p>
 
 		<p>Help with the Border Router Security Tool (BRST).</p>
 
@@ -52,82 +52,86 @@
 			<p>For more information, consult the NSA's <a href="http://www.nsa.gov/snac/downloads_cisco.cfm?MenuID=scg10.3.1" target="_blank">Router Security Configuration Guide</a>, or
 			Cisco's <a href="http://www.cisco.com/en/US/tech/tk648/tk361/technologies_tech_note09186a0080120f48.shtml" target="_blank">Guide to Harden Cisco IOS Devices</a></p>
 
-			<b><a id="index">Index</a> of Cisco commands and help items covered in this help file.</b><br />
+			<div class="sidebar-help">
 			
-			<p><b><a href="#crypto-key">Crypto key generation</a></b><br />
+				<ul class="help">
+				
+					<li class="help"><a href="#crypto-key">Crypto key generation</a></li>
+					<li class="help"><a href="#troubleshoot">Troubleshooting</a></li>
+					<li class="help">
+						<ul>
+						<h4><a href="#global">Global router commands (disable)</a></h4>
+							<ul class="help">
+								<li class="help"><a href="#boot">network boot</a></li>
+								<li class="help"><a href="#cdp">cdp</a></li>
+								<li class="help"><a href="#svc">config</a></li>
+								<li class="help"><a href="#dhcp">dhcp</a></li>
+								<li class="help"><a href="#pad">pad</a></li>
+								<li class="help"><a href="#finger">finger</a></li>
+								<li class="help"><a href="#grat_arps">gratuitous_arps</a></li>
+								<li class="help"><a href="#http">http server</a></li>
+								<li class="help"><a href="#http_sec">http secure-server</a></li>
+								<li class="help"><a href="#name_srv">name-server</a></li>
+								<li class="help"><a href="#src_rt">ip source-route</a></li>
+								<li class="help"><a href="#lldp">lldp</a></li>
+								<li class="help"><a href="#tcp_ss">tcp-small-servers</a></li>
+								<li class="help"><a href="#udp_ss">udp-small-servers</a></li>
+							</ul>
+						</ul>
+					</li>
 
-			<p><b><a href="#troubleshoot">Troubleshooting</a></b><br />
+					<li class="help"><h4><a href="#interface">Interface specific commands (disable)</a></h4></li>
+					<li class="help"><a href="#cdp_ena">cdp</a></li>
+					<li class="help"><a href="#ip_bcast">ip directed-broadcast</a></li>
+					<li class="help"><a href="#redirects">ip redirect</a></li>
+					<li class="help"><a href="#proxy_arp">ip proxy-arp</a></li>
+					<li class="help"><a href="#mask_reply">ip mask-reply</a></li>
+					<li class="help"><a href="#unreachables">ip unreachables</a></li>
+					<li class="help"><a href="#mop">mop</a></li>
+					<li class="help"><a href="#ntp">ntp</a></li>
+					<li class="help"><a href="#loopback">loopback interface</a></li>
+					<li class="help"><a href="#null">null interface</a></li>
+					
+					<li class="help"><h4><a href="#global_en">Global router commands (enable)</a></h4></li>
+					<li class="help"><a href="#cef">ip cef</a></li>
+					<li class="help"><a href="#ntp_receive">ntp receive</a></li>
+					<li class="help"><a href="#pw_encryption">password-encryption</a></li>
+					<li class="help"><a href="#tcp_keepalives_in">tcp-keepalives-in</a></li>
+					<li class="help"><a href="#tcp_keepalives_out">tcp-keepalives-out</a></li>
+					<li class="help"><a href="#ssh_time_out">ssh timeout</a></li>
+					<li class="help"><a href="#ssh_auth_retries">ssh authentication retries</a></li>
+
+					<li class="help"><h4><a href="#access">Access control</a></h4></li>
+					<li class="help"><a href="#aux">aux port</a></li>
+					<li class="help"><a href="#console">console port</a></li>
+					<li class="help"><a href="#vty">vty ports</a></li>
+				
+				</ul>
 			
-			<p><b><a href="#warn">Handling Warnings</a></b><br />
+			</div>
+
+			<div class="section-help">
 			
-			<p><b><a href="#global">Global router commands (disable)</a></b><br />
-			<a href="#boot">network boot</a><br />
-			<a href="#cdp">cdp</a><br />
-			<a href="#svc">config</a><br />
-			<a href="#dhcp">dhcp</a><br />
-			<a href="#pad">pad</a><br />
-			<a href="#finger">finger</a><br />
-			<a href="#grat_arps">gratuitous_arps</a><br />
-			<a href="#http">http server</a><br />
-			<a href="#http_sec">http secure-server</a><br />
-			<a href="#name_srv">name-server</a><br />
-			<a href="#src_rt">ip source-route</a><br />
-			<a href="#lldp">lldp</a><br />
-			<a href="#tcp_ss">tcp-small-servers</a><br />
-			<a href="#udp_ss">udp-small-servers</a><br />
-			</p>
-
-			<p><b><a href="#interface">Interface specific commands (disable)</a></b><br />
-			<a href="#cdp_ena">cdp</a><br />
-			<a href="#ip_bcast">ip directed-broadcast</a><br />
-			<a href="#redirects">ip redirect</a><br />
-			<a href="#proxy_arp">ip proxy-arp</a><br />
-			<a href="#mask_reply">ip mask-reply</a><br />
-			<a href="#unreachables">ip unreachables</a><br />
-			<a href="#mop">mop</a><br />
-			<a href="#ntp">ntp</a><br />
-			<a href="#loopback">loopback interface</a><br />
-			<a href="#null">null interface</a><br />
-			</p>
-
-			<p><b><a href="#global_en">Global router commands (enable)</a></b><br />
-			<a href="#cef">ip cef</a><br />
-			<a href="#ntp_receive">ntp receive</a><br />
-			<a href="#pw_encryption">password-encryption</a><br />
-			<a href="#tcp_keepalives_in">tcp-keepalives-in</a><br />
-			<a href="#tcp_keepalives_out">tcp-keepalives-out</a><br />
-			<a href="#ssh_time_out">ssh timeout</a><br />
-			<a href="#ssh_auth_retries">ssh authentication retries</a><br />
-			</p>
-
-			<p><b><a href="#access">Access control</a></b><br />
-			<a href="#aux">aux port</a><br />
-			<a href="#console">console port</a><br />
-			<a href="#vty">vty ports</a><br />
-			</p>
-
-			<div class="section">
-			
-				<h3>How to generate a crypto key</h3>
+				<h3><a id="crypto-key">How to generate a crypto key</a></h3>
 				
 				<p>Here are the steps to generate a crypto key on your router:</p>
 				
-				<p class="code-font">! <a id="crypto-key">RSA Cryptography Key Generation Instructions for the crst</a><br />
+				<p class="code-font">! RSA Cryptography Key Generation Instructions for the brst<br />
 				! The following commands must be entered at the enable prompt to<br />
 				! configure a domain name and to generate a crypto-key:<br />
 				!<br />
-				<b>configure terminal</b><br />
+				<b class="code-font">configure terminal</b><br />
 				!<br /></p>
-				! <b>Replace RouterOne</b> below with your preferred router hostname.<br />
+				!<b>Replace RouterOne</b> below with your preferred router hostname.<br />
 				!<br />
 				<p class="code-font"><b>hostname RouterOne</b><br /></p>
 				!<br />
-				! <b>Replace mydomain.com</b> with your domain name.</b><br />
+				!<b>Replace mydomain.com</b> with your domain name.<br />
 				!<br />
 				<p class="code-font"><b>ip domain-name mydomain.com</b><br /></p>
 				!<br />
-				<b>crypto key generate rsa</b><br />
-				!<br /></p>
+				<b class="code-font">crypto key generate rsa</b><br />
+				!<br />
 				<p>! (You will see the following output on the router).<br /></p>
 				!<br />
 				<p class="code-font">! The name for the keys will be: RouterOne<br />
@@ -144,7 +148,7 @@
 			
 			</div>
 			
-			<div class="section">
+			<div class="section-help">
 			
 				<h2><a id="troubleshoot">Troubleshooting some common problems</a></h2>
 
@@ -178,11 +182,11 @@
 			
 			</div>
 			
-			<div class="section">
+			<div class="section-help">
 			
 				<h3>Description of Services and Protocols and Recommended Settings</h3>
 
-				<div class="group">
+				<div class="group-help">
 				
 					<h3><a id="global">Global</a> Router Commands (to be disabled)</h3>
 
@@ -282,7 +286,7 @@
 				
 				</div>
 
-				<div class="group">
+				<div class="group-help">
 				
 					<h3><a id="interface">Interface</a> Specific Commands (to be disabled)</h3>
 
@@ -389,7 +393,7 @@
 					
 				</div>
 				
-				<div class="group">
+				<div class="group-help">
 
 					<h3><a id="#global_en">Global router commands (to be enabled)</a></h3><br />
 
@@ -434,7 +438,7 @@
 
 					<a id="#ssh_time_out"><b>ssh timeout</b></a><br />
 					<p>If tcp-keepalives-in are enabled, idle SSH sessions can be logged of after a
-					pre-set time.  The crst shuts down idle sessions after 20 minutes of inactivity.
+					pre-set time.  The brst shuts down idle sessions after 20 minutes of inactivity.
 					This reduces the chance that someone can walk up to a computer with a session
 					connected and make changes.  <br />
 					Enabling ssh timeout is recommended.
@@ -443,7 +447,7 @@
 					<a id="#ssh_auth_retries"><b>ssh authentication retries</b></a><br />
 					<p>SSH authentication retries (attempts where a bad username or password has been
 					entered) can be limited to thwart brute force password cracking attempts.  The
-					crst sets the number of attempts before lockout to three.  <br />
+					brst sets the number of attempts before lockout to three.  <br />
 					Limiting ssh authentication retries is recommended.
 					</p>
 
@@ -476,7 +480,7 @@
 			<a href="http://sourceforge.net/projects/borderroutersec">
 			<img  class="repo-logo" src="http://sflogo.sourceforge.net/sflogo.php?group_id=304482&amp;type=12"
 			width="120" height="30" alt="Get BRST - Border Router Security Tool at
-			SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
+			SourceForge.net." /></a>
 			
 			<h3>Disclaimer and Licensing</h3>
 			

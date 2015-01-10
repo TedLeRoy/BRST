@@ -19,19 +19,19 @@
 
 	<div class="container">
 
-		<p class="version">Version 2.0.0</p>
+		<p class="version">Version 2.0.2</p>
 	
 		<div class="topmenu">
 		
 			<ul>
 		
-				<li id="current"><a href="index.html" target="_blank">Start Here</a></li>
-				<li><a href="normal.html" target="_blank">Normal</a></li>
-				<li><a href="advanced.html" target="_blank">Advanced</a></li>
-				<li><a href="help.html" target="_blank">Help</a></li>
-				<li><a href="faq.html" target="_blank">FAQ</a></li>
-				<li><a href="about.html" target="_blank">About</a></li>
-				<li><a href="copying.html" target="_blank">Copying</a></li>
+				<li id="current"><a href="index.html">Start Here</a></li>
+				<li><a href="normal.html">Normal</a></li>
+				<li><a href="advanced.html">Advanced</a></li>
+				<li><a href="help.html">Help</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="copying.html">Copying</a></li>
 
 			</ul>
 
@@ -39,7 +39,7 @@
 
 		<h1>Start Here - Border Router Security Tool (BRST)</h1>
 
-		<p class="bold-paragraph">"Securing the Internet one router at a time."</p>
+		<p class="catch-phrase">"Securing the Internet one router at a time."</p>
 
 		<p>Steps to successfully using the BRST</p>
 
@@ -56,40 +56,34 @@
 						<ul>
 						
 							<li><span class="bold-font">Step 1:</span> Create a backup file of the router's current configuration.</li>
-							
-							<div class="sub-list1">
-							
-								<ul>
-									
-									<li><span class="bold-font">Step 1a:</span> Making a backup file of the router's current configuration:</li>
-									<li><span class="bold-font">Step 1b:</span> In your terminal emulation software, start a log file capture, then do a <span class="code-font">show run</span>. Save the file created (Be sure to name the file with a .txt extension and save it to a location you'll remember).</li>
-									
-									<div class="sub-list2">
-									
-										<li><span class="bold-font">Step 1b2:</span> If using TeraTerm, go to File, then Log in the menu. (Remember where you saved it and the name).</li>
-										<li><span class="bold-font">Step 1b3:</span> Make sure you're captured your entire configuration file.</li>
-									
-									</div>									
-									
-									<li><span class="bold-font">Step 1c:</span> When using this method of backing up, you will have <span class="code-font">--more--</span> several times in the captured file. You will have to delete the lines that say <span class="code-font">--more--</span> before reusing the configuration.</li>
-									<li><span class="bold-font">Step 1d:</span> Depending on what you typed while doing this, you may also have additional text or output to remove at the top and bottom of the configuration.</li>
-									
-								</ul>
-							
-							</div>
-							
+								<li>
+									<ul class="sub-list1">
+										<li><span class="bold-font">Step 1a:</span> Making a backup file of the router's current configuration:</li>
+										<li><span class="bold-font">Step 1b:</span> In your terminal emulation software, start a log file capture, then do a <span class="code-font">show run</span>. Save the file created (Be sure to name the file with a .txt extension and save it to a location you'll remember).</li>
+										<li>
+											<ul class="sub-list2">
+											
+												<li><span class="bold-font">Step 1b1:</span> If using PuTTY, go to Session, then Logging in the menu. Select the Printable output radio button. Select a location. (Remember where you saved it and the name).</li>
+												<li><span class="bold-font">Step 1b2:</span> Make sure you're captured your entire configuration file.</li>
+											
+											</ul>									
+										</li>
+										<li><span class="bold-font">Step 1c:</span> When using this method of backing up, you will have <span class="code-font">--more--</span> several times in the captured file. You will have to delete the lines that say <span class="code-font">--more--</span> before reusing the configuration.</li>
+										<li><span class="bold-font">Step 1d:</span> Depending on what you typed while doing this, you may also have additional text or output to remove at the top and bottom of the configuration.</li>
+									</ul>
+								</li>
 							<li><span class="bold-font">Step 2:</span> Test that your backup configuration file works (complete steps 8 through 16 below with your existing configuration file prior to continuing).</li>
-							<li><span class="bold-font">Step 3:</span> Enter the information requested in the <a href="normal.html" target="_blank">Normal</a> or <a href="advanced.html">Advanced</a> web form then click [Submit].</li>
+							<li><span class="bold-font">Step 3:</span> If you were able to successfully restore your existing configuration, enter the information requested in the <a href="normal.html">Normal</a> or <a href="advanced.html">Advanced</a> web form then click [Submit].</li>
 							<li><span class="bold-font">Step 4:</span> In your browser, select the text from the <span class="code-font">!Start Copying Config File Here!</span> to the <span class="code-font">!Stop Copying Config File Here!</span> labels.</li>
-							<li><span class="bold-font">Step 5:</span> Copy the selected text to the Windows, or Linux clipboard by right clicking and selecting "copy" or hitting Ctrl-C.</li>
+							<li><span class="bold-font">Step 5:</span> Copy the selected text to the Windows, or Linux clipboard by right clicking and selecting "copy" from the menu or hitting [Ctrl-C].</li>
 							<li><span class="bold-font">Step 6:</span> Open Notepad or the text editor or your choice and copy the contents into the text file.</li>
 							<li><span class="bold-font">Step 7:</span> Save a copy of the text file in a safe place, preferably in a place where it is backed up to backup media.</li>
 							<li><span class="bold-font">Step 8:</span> Clear your configuration by being in <span class="code-font">configure</span> mode and typing <span class="code-font">write erase</span> then <span class="code-font">reload</span>.</li>
 							<li><span class="bold-font">Step 9:</span> Select and copy the contents of the text file to the Windows or Linux clipboard again, unless it's still there from before.</li>
-							<li><span class="bold-font">Step 10:</span> Open a terminal emulator such as Putty or TeraTerm and connect to your router via the Console port.</li>
+							<li><span class="bold-font">Step 10:</span> Open a terminal emulator such as PuTTY and connect to your router via the Console port.</li>
 							<li><span class="bold-font">Step 11:</span> Once connected, paste the generated configuration file directly into the console.</li>
 							<li><span class="bold-font">Step 12:</span> Watch for any errors during the copying of the configuration file.</li>
-							<li><span class="bold-font">Step 13:</span> If there were no errors, type <span class="code-font">wr mem</span> (write memory), or use the "official" command <span class="code-font">copy running-configuration startup-configuration</span> and hit &ltenter&gt. You're done!</li>
+							<li><span class="bold-font">Step 13:</span> If there were no errors, type <span class="code-font">wr mem</span> (write memory), or use the "official" command <span class="code-font">copy running-configuration startup-configuration</span> and hit &lt;enter&gt;. You're done!</li>
 							<li><span class="bold-font">Step 14:</span> If there were errors, read them and search for answers (Google is your friend).</li>
 							<li><span class="bold-font">Step 15:</span> If the errors don't impact the functionality or security of your router, do Step: 13 above.</li>
 							<li><span class="bold-font">Step 16:</span> If the errors are serious, or your router won't function without resolving them, copy your original configuration file back onto the router, and try again when you find a solution.</li>
@@ -107,7 +101,7 @@
 			<a href="http://sourceforge.net/projects/borderroutersec">
 			<img  class="repo-logo" src="http://sflogo.sourceforge.net/sflogo.php?group_id=304482&amp;type=12"
 			width="120" height="30" alt="Get BRST - Border Router Security Tool at
-			SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
+			SourceForge.net." /></a>
 			
 			<h3>Disclaimer and Licensing</h3>
 			

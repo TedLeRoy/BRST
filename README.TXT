@@ -18,6 +18,23 @@ E-mail address:
 theodore.leroy@yahoo.com
 
 Release Quality:
+As of 9 January, 2015
+Corrected nested tables on the faq.html and index.html pages so they now validate.
+
+Shortened the alt wording for Sourceforge at the bottom of all pages.
+
+Clarified look and wording on index.html and help.html pages.
+
+Removed config.html tab from all but the configuration page as it understandably generates an error if not hitting it via the "Submit" button.
+
+
+As of 6 January, 2015
+
+Corrected error in router_config.php that was causing php not to display. (See Trouble Ticket #2, php not working).
+
+Removed target="_blank" from internal links.
+
+Removed references to "howto.html" and corrected them to read "index.html" (Start Here page).
 
 As of 28 December, 2014
 
