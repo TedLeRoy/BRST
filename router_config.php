@@ -37,6 +37,12 @@
 			</ul>
 
 		</div>
+
+		<div class="logo">
+		
+			<img src="images/brst-logo-big.png">
+		
+		</div>
 		
 		<h1>Secure Configuration File - Border Router Security Tool (BRST)</h1>
 
@@ -988,7 +994,7 @@
 			echo "<b>! Null routing for BOGON and Martian Addresses</b><br />";
 			echo "<b>! Last updated 1 January 2015</b><br />";
 			echo "<b>! For more info and the latest list, see the following web site:</b><br />";
-			echo "<b>! http://www.cymru.com/Documents/bogon-list.html</b><br />";
+			echo "<b>! https://www.cymru.com/Documents/bogon-list.html</b><br />";
 			echo "<br />";
 
 			if ((  $_POST["normal"] == "yes"   ) || (  $_POST["checkbox_null_route"] == "checked" )) {
@@ -1362,8 +1368,8 @@
 			
 		<div class="disclaimer">
 
-			<a href="http://sourceforge.net/projects/borderroutersec">
-			<img  class="repo-logo" src="http://sflogo.sourceforge.net/sflogo.php?group_id=304482&amp;type=12"
+			<a href="https://sourceforge.net/projects/borderroutersec">
+			<img  class="repo-logo" src="https://sflogo.sourceforge.net/sflogo.php?group_id=304482&amp;type=12"
 			width="120" height="30" alt="Get BRST - Border Router Security Tool at
 			SourceForge.net." /></a>
 			
@@ -1387,9 +1393,9 @@
 			<p>Source code can be obtained at:  <a href="https://sourceforge.net/projects/borderroutersec/">
 			https://sourceforge.net/projects/borderroutersec/</a></p>
 			
-			<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img class="left-logo" style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
+			<a href="https://jigsaw.w3.org/css-validator/check/referer"> <img class="left-logo" style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
 		
-			<a href="http://www.gnu.org/licenses/"><img class="right-logo" alt="Affero GPL v3 Logo" src="images/agplv3-88x31.png"></a>
+			<a href="https://www.gnu.org/licenses/"><img class="right-logo" alt="Affero GPL v3 Logo" src="images/agplv3-88x31.png"></a>
 		
 		</div>
 		

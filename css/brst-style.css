@@ -111,6 +111,10 @@ ul {
 	visibility: hidden;
 }
 
+.logo {
+	float: right;
+}
+
 .topmenu {
 	list-style: none;
 	height: 2em;
@@ -200,6 +204,7 @@ ul {
 }
 
 /* Help Hover Menu Start */
+/*
 .help ul {
 	padding: 0;
 	list-style: none;
@@ -223,10 +228,25 @@ ul {
 	display: none;
 }
 .help ul li:hover ul{
-	display: block; /* display the dropdown */
+	display: block; /* display the dropdown *//*
 	position: relative;
 }
+*/
 /* Help Hover Menu End */
+
+ul.submenu {
+  display:none;
+ }
+ ul.submenu:hover{
+ display:block;
+ }
+ ul.submenu li.sub_list_item {
+ width:100px;
+ background:blue;
+ color:#fff;
+ line-height:30px;
+ height:30px
+ }
 
 /* Help page Settings Start */	
 .section-help {
