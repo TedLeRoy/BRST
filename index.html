@@ -1,142 +1,166 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<html lang="en-US">
-
+<html lang="en">
 <head>
+    <meta charset="utf-8">
 
-	<title>Start Here - BRST - Border Router Security Tool</title>
-	<link rel="stylesheet" href="css/brst-style.css" />
-	<!--[if lt IE 9]> 
-		<script src="js/html5shiv-printshiv.js"> </script> 
-	<![endif]--> 
-	<meta charset="utf-8" />
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <title>Home | BRST</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="css/bootstrap.css" media="screen" rel="stylesheet">
+    <link href="css/bootswatch.min.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="../bower_components/html5shiv/dist/html5shiv.js"></script> <script src="../bower_components/respond/dest/respond.min.js"></script> <![endif]-->
+	
+    <link href="img/brst-brand.png" rel="icon" type="image/png">
+	<style>
+	ul
+{
+    list-style-type: none;
+}
+</style>
 </head>
 
 <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img alt="Brand" src="img/brst-brand.png" style="max-width:100px; margin-top: -7px;"></a>
+                <button class="navbar-toggle" data-target="#navbar-main"
+                data-toggle="collapse" type="button"><span class=
+                "icon-bar"></span> <span class="icon-bar"></span> <span class=
+                "icon-bar"></span></button>
+            </div>
 
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+					<li>
+                        <a href="normal.html">Normal</a>
+                    </li>
+					<li>
+                        <a href="advanced.html">Advanced</a>
+                    </li>
+					<li>
+                        <a href="faq.html">FAQ</a>
+                    </li>
+					<li>
+                        <a href="download.html">Download</a>
+                    </li>
+					<li class="dropdown">
+					  <a  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Help <span class="caret"></span></a>
+					  <ul class="dropdown-menu" role="menu">
+						<li><a href="crypto-key-generation.html">Crypto Key Generation</a></li>
+						<li><a href="troubleshooting.html">Troubleshooting</a></li>
+						<li><a href="services-and-protocols.html">Services and Protocols</a></li>
+					  </ul>
+					</li>
+				</ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html" >About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                    <li>
+                        <a href="copying.html">Copying</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 	<div class="container">
-
-		<p class="version">Version 2.0.2</p>
-	
-		<div class="topmenu">
-		
-			<ul>
-		
-				<li id="current"><a href="index.html">Start Here</a></li>
-				<li><a href="normal.html">Normal</a></li>
-				<li><a href="advanced.html">Advanced</a></li>
-				<li><a href="help.html">Help</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="copying.html">Copying</a></li>
-
-			</ul>
-
-		</div>
-
-		<div class="logo">
-		
-			<img src="images/brst-logo-big.png">
-		
-		</div>
-		
-		<h1>Start Here - Border Router Security Tool (BRST)</h1>
-
-		<p class="catch-phrase">"Securing the Internet one router at a time."</p>
-
-		<p>Steps to successfully using the BRST</p>
-
-		<main>
-
-			<p>A guide to preparing for and using the BRST to successfully create and load a the secure configuration file.</p>
-		
-			<p>The Border Router Security Tool (BRST) is a free, open source, web based utility which asks for some information about your router and generates a recommended secure configuration file when you submit the information.</p>
-			
-				<div class="section">
-				
-					<div class="step-list">
-					
-						<ul>
+		<div class="row">
+          <div class="col-lg-12">
+            <center>
+				<br/><br/>
+				<img src="img/brst-logo.png" />
+				<h5>Border Router Security Tool</h5>
+				<h6>Securing the Internet one router at a time</h6>
+				<hr>
+			</center>
+          </div>
+        </div>
+		<div class="row">
+          <div class="col-lg-12">
+		  <p>The Border Router Security Tool (BRST) is a free, open source, web based utility which asks for some information about your router and generates a recommended secure configuration file when you submit the information.
+		  </p>
+          </div>
+        </div>
+		<div class="row">
+          <div class="col-lg-12">
+		  <h4>Steps to successfully using the BRST</h4>
+		  <p>
+		  
+						<ol>
 						
-							<li><span class="bold-font">Step 1:</span> Create a backup file of the router's current configuration.</li>
-								<li>
-									<ul class="sub-list1">
-										<li><span class="bold-font">Step 1a:</span> Making a backup file of the router's current configuration:</li>
-										<li><span class="bold-font">Step 1b:</span> In your terminal emulation software, start a log file capture, then do a <span class="code-font">show run</span>. Save the file created (Be sure to name the file with a .txt extension and save it to a location you'll remember).</li>
+							<li> Create a backup file of the router's current configuration.
+							<br/>
+									<ul>
+										<li>In your terminal emulation software, start a log file capture, then do a <span class="code-font">show run</span>. Save the file created (Be sure to name the file with a .txt extension and save it to a location you'll remember).</li>
 										<li>
 											<ul class="sub-list2">
 											
-												<li><span class="bold-font">Step 1b1:</span> If using PuTTY, go to Session, then Logging in the menu. Select the Printable output radio button. Select a location. (Remember where you saved it and the name).</li>
-												<li><span class="bold-font">Step 1b2:</span> Make sure you're captured your entire configuration file.</li>
+												<li><b>Step 1b1:</b> If using PuTTY, go to Session, then Logging in the menu. Select the Printable output radio button. Select a location. (Remember where you saved it and the name).</li>
+												<li><b>Step 1b2:</b> Make sure you're captured your entire configuration file.</li>
 											
 											</ul>									
 										</li>
-										<li><span class="bold-font">Step 1c:</span> When using this method of backing up, you will have <span class="code-font">--more--</span> several times in the captured file. You will have to delete the lines that say <span class="code-font">--more--</span> before reusing the configuration.</li>
-										<li><span class="bold-font">Step 1d:</span> Depending on what you typed while doing this, you may also have additional text or output to remove at the top and bottom of the configuration.</li>
+										<li><b>Step 1c:</b> When using this method of backing up, you will have <span class="code-font">--more--</span> several times in the captured file. You will have to delete the lines that say <span class="code-font">--more--</span> before reusing the configuration.</li>
+										<li><b>Step 1d:</b> Depending on what you typed while doing this, you may also have additional text or output to remove at the top and bottom of the configuration.</li>
 									</ul>
-								</li>
-							<li><span class="bold-font">Step 2:</span> Test that your backup configuration file works (complete steps 8 through 16 below with your existing configuration file prior to continuing).</li>
-							<li><span class="bold-font">Step 3:</span> If you were able to successfully restore your existing configuration, enter the information requested in the <a href="normal.html">Normal</a> or <a href="advanced.html">Advanced</a> web form then click [Submit].</li>
-							<li><span class="bold-font">Step 4:</span> In your browser, select the text from the <span class="code-font">!Start Copying Config File Here!</span> to the <span class="code-font">!Stop Copying Config File Here!</span> labels.</li>
-							<li><span class="bold-font">Step 5:</span> Copy the selected text to the Windows, or Linux clipboard by right clicking and selecting "copy" from the menu or hitting [Ctrl-C].</li>
-							<li><span class="bold-font">Step 6:</span> Open Notepad or the text editor or your choice and copy the contents into the text file.</li>
-							<li><span class="bold-font">Step 7:</span> Save a copy of the text file in a safe place, preferably in a place where it is backed up to backup media.</li>
-							<li><span class="bold-font">Step 8:</span> Clear your configuration by being in <span class="code-font">configure</span> mode and typing <span class="code-font">write erase</span> then <span class="code-font">reload</span>.</li>
-							<li><span class="bold-font">Step 9:</span> Select and copy the contents of the text file to the Windows or Linux clipboard again, unless it's still there from before.</li>
-							<li><span class="bold-font">Step 10:</span> Open a terminal emulator such as PuTTY and connect to your router via the Console port.</li>
-							<li><span class="bold-font">Step 11:</span> Once connected, paste the generated configuration file directly into the console.</li>
-							<li><span class="bold-font">Step 12:</span> Watch for any errors during the copying of the configuration file.</li>
-							<li><span class="bold-font">Step 13:</span> If there were no errors, type <span class="code-font">wr mem</span> (write memory), or use the "official" command <span class="code-font">copy running-configuration startup-configuration</span> and hit &lt;enter&gt;. You're done!</li>
-							<li><span class="bold-font">Step 14:</span> If there were errors, read them and search for answers (Google is your friend).</li>
-							<li><span class="bold-font">Step 15:</span> If the errors don't impact the functionality or security of your router, do Step: 13 above.</li>
-							<li><span class="bold-font">Step 16:</span> If the errors are serious, or your router won't function without resolving them, copy your original configuration file back onto the router, and try again when you find a solution.</li>
+								
+							<li>Test that your backup configuration file works (complete steps 8 through 16 below with your existing configuration file prior to continuing).</li>
+							<li>If you were able to successfully restore your existing configuration, enter the information requested in the <a href="normal.html">Normal</a> or <a href="advanced.html">Advanced</a> web form then click [Submit].</li>
+							<li>In your browser, select the text from the <span class="code-font">!Start Copying Config File Here!</span> to the <span class="code-font">!Stop Copying Config File Here!</span> labels.</li>
+							<li>Copy the selected text to the Windows, or Linux clipboard by right clicking and selecting "copy" from the menu or hitting [Ctrl-C].</li>
+							<li>Open Notepad or the text editor or your choice and copy the contents into the text file.</li>
+							<li>Save a copy of the text file in a safe place, preferably in a place where it is backed up to backup media.</li>
+							<li>Clear your configuration by being in <span class="code-font">configure</span> mode and typing <span class="code-font">write erase</span> then <span class="code-font">reload</span>.</li>
+							<li>Select and copy the contents of the text file to the Windows or Linux clipboard again, unless it's still there from before.</li>
+							<li>Open a terminal emulator such as PuTTY and connect to your router via the Console port.</li>
+							<li>Once connected, paste the generated configuration file directly into the console.</li>
+							<li>Watch for any errors during the copying of the configuration file.</li>
+							<li>If there were no errors, type <span class="code-font">wr mem</span> (write memory), or use the "official" command <span class="code-font">copy running-configuration startup-configuration</span> and hit &lt;enter&gt;. You're done!</li>
+							<li>If there were errors, read them and search for answers (Google is your friend).</li>
+							<li>If the errors don't impact the functionality or security of your router, do Step: 13 above.</li>
+							<li>If the errors are serious, or your router won't function without resolving them, copy your original configuration file back onto the router, and try again when you find a solution.</li>
 						
-						</ul>
-					
-					</div>
-				
+						</ol>
+		  </p>
+          </div>
+        </div>
+	
+	
+	
+	<footer>
+	
+		<div class="row">
+			<div class="col-lg-12">	
+				<div class="footer-font">
+					<h4>Disclaimer and Licensing</h4>
+					<p>The "fine print."</p>
+					<p>This software is not sponsored by, endorsed by or affiliated with Cisco Systems, Inc.  Cisco, Cisco Systems, and IOS are registered trademarks of Cisco Systems, Inc. in the USA and certain other countries.  All other trademarks are trademarks of their respective owners.</p>
+					<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+					<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.</p>
+					<p>A local copy of the license can be found at <a href="copying.html">copying</a>.</p>
 				</div>
-
-		</main>
-			
-		<div class="disclaimer">
-
-			<a href="https://sourceforge.net/projects/borderroutersec">
-			<img  class="repo-logo" src="https://sflogo.sourceforge.net/sflogo.php?group_id=304482&amp;type=12"
-			width="120" height="30" alt="Get BRST - Border Router Security Tool at
-			SourceForge.net." /></a>
-			
-			<h3>Disclaimer and Licensing</h3>
-			
-			<p>The "fine print."</p>
-
-			<p>This software is not sponsored by, endorsed by or affiliated with Cisco Systems, Inc.  Cisco, Cisco Systems, and IOS are registered trademarks of Cisco Systems, Inc. in the USA and certain other countries.  All other trademarks are trademarks of their respective owners.</p>
-
-			<p>BRST - Border Router Security Tool, Helps administrators secure their border routers.
-			Copyright &copy; 2014 Ted LeRoy</p>
-
-			<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
-
-			<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.</p>
-
-			<p>A local copy of the license can be found at <a href="copying.html">copying</a>.</p>
-
-			<p>theodore_dot_leroy_at_yahoo_dot_com</p>
-
-			<p>Source code can be obtained at:  <a href="https://sourceforge.net/projects/borderroutersec/">
-			https://sourceforge.net/projects/borderroutersec/</a></p>
-			
-			<a href="https://jigsaw.w3.org/css-validator/check/referer"> <img class="left-logo" style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-		
-			<a href="https://www.gnu.org/licenses/"><img class="right-logo" alt="Affero GPL v3 Logo" src="images/agplv3-88x31.png"></a>
-		
+			</div>
 		</div>
-		
+			
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="list-unstyled">
+              <li><a href="https://www.borderroutersec.org/">&copy; 2015 Ted LeRoy</a></li>
+              <li class="pull-right"><a href="https://www.borderroutersec.org/">BorderRouterSec.org</a></li>
+              <li class="pull-right"><a href="https://github.com/TedLeRoy/BRST">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </footer>
 	</div>
-
+	 <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootswatch.js"></script>
 </body>
-
 </html>

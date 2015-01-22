@@ -1,23 +1,19 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<html lang="en-US">
-
+<html lang="en">
 <head>
+    <meta charset="utf-8">
 
-	<title>Advanced - BRST - Border Router Security Tool</title>
-
-	<link rel="stylesheet" href="css/brst-style.css" />
-	<!--[if lt IE 9]> 
-		<script src="js/html5shiv-printshiv.js"> </script> 
-	<![endif]--> 
-	<meta charset="utf-8" />
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	
-	<!--Javascript for Checkall/Uncheckall Checkboxes-->
-
+    <title>Advanced Mode | BRST</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="css/bootstrap.css" media="screen" rel="stylesheet">
+    <link href="css/bootswatch.min.css" rel="stylesheet">
+    <!--[if lt IE 9]><script src="../bower_components/html5shiv/dist/html5shiv.js"></script> <script src="../bower_components/respond/dest/respond.min.js"></script> <![endif]-->
+    <link href="img/brst-brand.png" rel="icon" type="image/png">
+    <script src="js/brst.js"></script>
 	<script type="text/javascript">
-
+	
+        var normal = "no";
 	function checkUncheckAll1a(theElement) {
 		 var form1 = theElement.form, z = 0;
 		 for(z=0; z<form1.length;z++){
@@ -55,179 +51,494 @@
 		}
 
 	 </script>
-
-	<!--End of Javascript for Checkall/Uncheckall Checkboxes-->
-
 </head>
 
 <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><img alt="Brand" src=
+                "img/brst-brand.png" style=
+                "max-width:100px; margin-top: -7px;"></a> <button class=
+                "navbar-toggle" data-target="#navbar-main" data-toggle=
+                "collapse" type="button"><span class="icon-bar"></span>
+                <span class="icon-bar"></span> <span class=
+                "icon-bar"></span></button>
+            </div>
 
-	<div class="container">
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="normal.html">Normal</a>
+                    </li>
 
-		<p class="version">Version 2.0.2</p>
+                    <li>
+                        <a href="advanced.html">Advanced</a>
+                    </li>
+
+                    <li>
+                        <a href="faq.html">FAQ</a>
+                    </li>
+
+                    <li>
+                        <a href="download.html">Download</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Help
+                        <span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="crypto-key-generation.html">Crypto Key
+                                Generation</a>
+                            </li>
+
+                            <li>
+                                <a href=
+                                "troubleshooting.html">Troubleshooting</a>
+                            </li>
+
+                            <li>
+                                <a href="services-and-protocols.html">Services
+                                and Protocols</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+
+                    <li>
+                        <a href="copying.html">Copying</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 	
-		<div class="topmenu">
-		
-			<ul>
-		
-				<li><a href="index.html">Start Here</a></li>
-				<li><a href="normal.html">Normal</a></li>
-				<li id="current"><a href="advanced.html">Advanced</a></li>
-				<li><a href="help.html">Help</a></li>
-				<li><a href="faq.html">FAQ</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="copying.html">Copying</a></li>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <br>
 
-			</ul>
-
-		</div>
-		
-		<div class="logo">
-		
-			<img src="images/brst-logo-big.png">
-		
-		</div>
-				
-		<h1>Advanced - Border Router Security Tool (BRST)</h1>
-
-		<p class="catch-phrase">"Securing the Internet one router at a time."</p>
+                <div class="content">
+		<h2>Advanced Mode</h2>
 
 		<p>Advanced configuration page - lets you choose all of your options.</p>
 
-		<main>
+                    <p class="bold-font">Be sure to follow the steps on the
+                    <a href="index.html">Start Here</a> page prior to
+                    starting.</p>
+
+                    <p>After completing the <a href="index.html">Start
+                    Here</a>, fill out the form below and click "Submit" to
+                    receive a secure Cisco router configuration file.</p>
+
+		
 		
 	
-			<form id="form1" name="form1" method="post" action="router_config.php">
+			<form id="form1">
 			
-				<div class="section">
-				
-					<h3>About Your Router</h3>
-					
-					<p>Enter a few details about your router.</p>
-					
-					<div class="singlequestion">
-					
-						Code version:
-						<input class="text_input" type="text" name="ver_major_release" size="2" maxlength="2" />
-						. <input class="text_input" type="text" name="ver_maint_release" size="2" maxlength="2" />
-						(<input class="text_input" type="text" name="ver_maint_revision" size="2" maxlength="2" />)
-					
-					</div>
-					
-					<div class="singlequestion">
-					
-						Router model:
-						<input class="text_input" type="text" name="hardware_version" size="25" maxlength="25" placeholder="For example: 1841..." />
-					
-					</div>
-					
-					<div class="singlequestion radio_button">
-					
-						Crypto support?: <label><input name="radio_encryption" type="radio" value="yes" checked="checked" />Yes</label>
-						<label><input name="radio_encryption" type="radio" value="no" />No</label>
-					
-					</div>
-					
-				</div>
-				
-				<div class="section">
-				
-					<h3>Router IP Information</h3>
-					
-					<p>Information relating to your router's interface names and IP addresses.</p>
-					
-						<div class="group">
-						
-							<h4>Gateway</h4>
-							
-							<p>This IP Address should be provided by your Internet Service Provider (ISP).</p>
-							
-								<div class="singlequestion">
-								
-									Gateway IP Address:
-									<input class="text_input" type="text" name="gw_ip1" size="3" maxlength="3" /> .
-									<input class="text_input" type="text" name="gw_ip2" size="3" maxlength="3" /> .
-									<input class="text_input" type="text" name="gw_ip3" size="3" maxlength="3" /> .
-									<input class="text_input" type="text" name="gw_ip4" size="3" maxlength="3" />
+				<div class="panel panel-default">
+                            <div class="panel-body">
+                                <h3>About Your Router</h3>
 
-								</div>
-						
-						</div>
-						
-						<div class="group">
-						
-							<h4>Outside (WAN) Interface</h4>
-							
-							<p>The Outside or Wide Area Nework (WAN) Interface is the one that connects your router to the Internet Service Provider's (ISP's) network.</p>
-							
-								<div class="singlequestion">
-								
-									Outside (WAN) Inteface Name:
-									<input class="text_input" type="text" name="wan_int" size="25" maxlength="25" placeholder="For example: ethernet0/0..." />
-								
-								</div>
+                                <p>Enter a few details about your router:</p>
+									<label class="col-lg-3 control-label ">Code version:</label>
 
-								<div class="singlequestion">
-								
-									 IP Address:  
-									 <input class="text_input" type="text" name="wan_int_ip1" size="3" maxlength="3" /> .
-									 <input class="text_input" type="text" name="wan_int_ip2" size="3" maxlength="3" /> .
-									 <input class="text_input" type="text" name="wan_int_ip3" size="3" maxlength="3" /> .
-									 <input class="text_input" type="text" name="wan_int_ip4" size="3" maxlength="3" />  
-								
-								</div>
-								
-								<div class="singlequestion">
-								
-									 Subnet Mask:  
-									  <input class="text_input" type="text" name="wan_int_mask1" size="3" maxlength="3" /> . 
-									  <input class="text_input" type="text" name="wan_int_mask2" size="3" maxlength="3" /> . 
-									  <input class="text_input" type="text" name="wan_int_mask3" size="3" maxlength="3" /> . 
-									  <input class="text_input" type="text" name="wan_int_mask4" size="3" maxlength="3" />
-								
-								</div>
-						
-						</div>
-						
-						<div class="group">
-						
-							<h4>Inside Interface</h4>
-							
-							<p>The Inside Interface is the one that connects the router to your Firewall or inside network.</p>
-							
-								<div class="singlequestion">
-								
-									Inside Inteface Name:
-									<input class="text_input" type="text" name="firewall_int" size="25" maxlength="25" placeholder="For example: ethernet0/1..." />
-								
-								</div>
+                                        <div class="form-group">
+                                            <div class="col-lg-9">
+                                                <div class="form-inline">
+                                                    <div class="form-group">
+                                                        <div class="col-lg-12">
+                                                            <select class=
+                                                            "form-control" id=
+                                                            "ver_major_release">
+                                                            <option value="15">
+                                                                15
+                                                                </option>
 
-								<div class="singlequestion">
-								
-									 IP Address:  
-									 <input class="text_input" type="text" name="firewall_int_ip1" size="3" maxlength="3" /> . 
-									 <input class="text_input" type="text" name="firewall_int_ip2" size="3" maxlength="3" /> . 
-									 <input class="text_input" type="text" name="firewall_int_ip3" size="3" maxlength="3" /> . 
-									 <input class="text_input" type="text" name="firewall_int_ip4" size="3" maxlength="3" />  				
-								
-								</div>
-								
-								<div class="singlequestion">
-								
-									 Subnet Mask:  
-									 <input class="text_input" type="text" name="firewall_int_mask1" size="3" maxlength="3" /> . 
-									 <input class="text_input" type="text" name="firewall_int_mask2" size="3" maxlength="3" /> . 
-									 <input class="text_input" type="text" name="firewall_int_mask3" size="3" maxlength="3" /> . 
-									 <input class="text_input" type="text" name="firewall_int_mask4" size="3" maxlength="3" />
+                                                                <option value=
+                                                                "14">
+                                                                    14
+                                                                </option>
 
+                                                                <option value=
+                                                                "13">
+                                                                    13
+                                                                </option>
+
+                                                                <option value=
+                                                                "12">
+                                                                    12
+                                                                </option>
+
+                                                                <option value=
+                                                                "11">
+                                                                    11
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div><b>.</b>
+
+                                                    <div class="form-group">
+                                                        <div class="col-lg-12">
+                                                            <select class=
+                                                            "form-control" id=
+                                                            "ver_maint_release">
+                                                            <option value="0">
+                                                                0
+                                                                </option>
+
+                                                                <option value=
+                                                                "1">
+                                                                    1
+                                                                </option>
+
+                                                                <option value=
+                                                                "2">
+                                                                    2
+                                                                </option>
+
+                                                                <option value=
+                                                                "3">
+                                                                    3
+                                                                </option>
+
+                                                                <option value=
+                                                                "4">
+                                                                    4
+                                                                </option>
+
+                                                                <option value=
+                                                                "5">
+                                                                    5
+                                                                </option>
+
+                                                                <option value=
+                                                                "6">
+                                                                    6
+                                                                </option>
+
+                                                                <option value=
+                                                                "7">
+                                                                    7
+                                                                </option>
+
+                                                                <option value=
+                                                                "8">
+                                                                    8
+                                                                </option>
+
+                                                                <option value=
+                                                                "9">
+                                                                    9
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div><b>(</b>
+
+                                                    <div class="form-group">
+                                                        <div class="col-lg-12">
+                                                            <select class=
+                                                            "form-control" id=
+                                                            "ver_maint_revision">
+                                                            <option value="0">
+                                                                0
+                                                                </option>
+
+                                                                <option value=
+                                                                "1">
+                                                                    1
+                                                                </option>
+
+                                                                <option value=
+                                                                "2">
+                                                                    2
+                                                                </option>
+
+                                                                <option value=
+                                                                "3">
+                                                                    3
+                                                                </option>
+
+                                                                <option value=
+                                                                "4">
+                                                                    4
+                                                                </option>
+
+                                                                <option value=
+                                                                "5">
+                                                                    5
+                                                                </option>
+
+                                                                <option value=
+                                                                "6">
+                                                                    6
+                                                                </option>
+
+                                                                <option value=
+                                                                "7">
+                                                                    7
+                                                                </option>
+
+                                                                <option value=
+                                                                "8">
+                                                                    8
+                                                                </option>
+
+                                                                <option value=
+                                                                "9">
+                                                                    9
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div><b>)</b>
+                                                </div>
+                                            </div>
+                                        </div>
+									<label class="col-lg-3 control-label ">Router model:</label>
+
+                                        <ul style="list-style-type: none;">
+                                            <li><input class=
+                                            "text_input form-control" id=
+                                            "hardware_version" maxlength="25"
+                                            placeholder="1841" size="25" style=
+                                            "max-width:20em;" type="text"></li>
+                                        </ul>
+									<label class="col-lg-3 control-label ">Crypto support?:</label>
+
+                                        <ul style="list-style-type: none;">
+                                            <li><label><input checked="checked"
+                                            class="form-control" name=
+                                            "radio_encryption" type="radio"
+                                            value="yes">Yes</label>&emsp;&emsp;
+                                            <label><input class="form-control"
+                                            name="radio_encryption" type=
+                                            "radio" value="no">No</label></li>
+                                        </ul>
+                            </div>
+                        </div>
+						<div class="panel panel-default">
+  <div class="panel-body">
+                            <h3>Router IP Information</h3>
+
+                            <p>Information relating to your router's interface
+                            names and IP addresses.</p>
+
+                            <div class="panel panel-default">
+  <div class="panel-body">
+                                <h4>Gateway</h4>
+
+                                <p>This IP Address should be provided by your
+                                Internet Service Provider (ISP).</p>
+
+                                <div class="singlequestion">
+									<div class="form-group">
+									  <label class="col-lg-3 control-label ">Gateway IP Address:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="gw_ip1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="gw_ip2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="gw_ip3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="gw_ip4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+                                </div>
+                            </div></div>
+
+                            <div class="panel panel-default">
+  <div class="panel-body">
+                                <h4>Outside (WAN) Interface</h4>
+
+                                <p>The Outside or Wide Area Nework (WAN)
+                                Interface is the one that connects your router
+                                to the Internet Service Provider's (ISP's)
+                                network.</p>
+
+                                <div class="singlequestion">
+                                     <label class="col-lg-3 control-label ">Outside (WAN) Inteface Name:</label><ul style="list-style-type: none;">
+                                            <li><input  id="wan_int" class="form-control" maxlength="25"
+                                    placeholder="ethernet0" style="max-width:20em;" size="25" type="text"></li></ul>
+									
+                                </div>
+                                <div class="singlequestion">
+									<div class="form-group">
+									  <label class="col-lg-3 control-label ">IP Address:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="wan_int_ip1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="wan_int_ip2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="wan_int_ip3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="wan_int_ip4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+                                </div>
+
+                                <div class="singlequestion">
+									<div class="form-group">
+									  <label class="col-lg-3 control-label ">Subnet Mask:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="wan_int_mask1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="wan_int_mask2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="wan_int_mask3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="wan_int_mask4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+                                </div>
+                            </div></div>
+
+                            <div class="panel panel-default">
+  <div class="panel-body">
+                                <h4>Inside Interface</h4>
+
+                                <p>The Inside Interface is the one that
+                                connects the router to your Firewall or inside
+                                network.</p>
+
+                                <div class="singlequestion">
+                                     <label class="col-lg-3 control-label ">Inside Interface Name:</label><ul style="list-style-type: none;">
+                                            <li><input  id="firewall_int" class="form-control" maxlength="25"
+                                    placeholder="ethernet1" style="max-width:20em;" size="25" type="text"></li></ul>
+                                </div>
 								
-								</div>
+                                <div class="singlequestion">
+									<div class="form-group">
+									  <label class="col-lg-3 control-label ">IP Address:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_int_ip1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_int_ip2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_int_ip3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_int_ip4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+                                </div>
+
+                                
+								<div class="singlequestion">
+									<div class="form-group">
+									  <label class="col-lg-3 control-label ">Subnet Mask:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_int_mask1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_int_mask2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_int_mask3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_int_mask4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+                                </div>
+                            </div></div>
+                        </div> </div>
 						
-						</div>
-					
-				</div>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
 				
-				<div class="section">
+				<div class="panel panel-default">
+  <div class="panel-body">
 				
 					<h3>Disabling Global Services</h3>
 				
@@ -235,345 +546,325 @@
 
 					<p>More information on protocols and services and recommended settings is available <a href="help.html#index" target="_blank">here</a>.</p>
 
-					<div class="group">
+					<div class="panel panel-default">
+  <div class="panel-body">
 					
-						<table>
-
-						  <tr>
-						  <td><label><strong><input type="checkbox" name="checkall" onclick="checkUncheckAll1a(this);" checked/>
-						  Select/Unselect All</strong></label><br /><b>(Select All recommended)</b></td>
-						  <td></td>
-						  <td></td>
-						  </tr>
-						  
-						  <tr>
-						  <td><label><input name="checkbox_boot" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#boot" target="_blank">network booting</a></label></td>
-
-						  <td><label><input name="checkbox_cdp" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#cdp" target="_blank">CDP</a></label></td>
-
-						  <td><label><input name="checkbox_svc" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#svc" target="_blank">config auto-load</a></label></td>
-						  </tr>
-
-						  <tr>
-						  <td><label><input name="checkbox_dhcp" type="checkbox" value="checked" checked />
-						  Disable <a href=help.html#dhcp target="_blank">DHCP</a></label></td>
-
-						  <td><label><input name="checkbox_pad" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#pad" target="_blank">pad</a></label></td>
-
-						  <td><label><input name="checkbox_finger" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#finger" target="_blank">IP Finger</a></label></td>
-						  </tr>
-
-						  <tr>
-						  <td><label><input name="checkbox_grat_arps" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#grat_arps" target="_blank">IP Gratuitous Arps</a></label></td>
-
-						  <td><label><input name="checkbox_http" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#http" target="_blank">HTTP Server</a></label></td>
-
-						  <td><label><input name="checkbox_http_sec" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#http_sec" target="_blank">HTTP Secure Server</a></label></td>
-
-						  </tr>
-						  
-						  <tr>
-						  <td><label><input name="checkbox_name_srv" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#name_srv" target="_blank">IP Name Server</a></label></td>
-
-						  <td><label><input name="checkbox_src_rt" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#src_rt" target="_blank">IP Source Route</a></label></td>
-
-						  <td><label><input name="checkbox_lldp" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#lldp" target="_blank">LLDP</a></label></td>
-						  </tr>
-
-						  <tr>
-						  <td><label><input name="checkbox_tcp_ss" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#tcp_ss" target="_blank">TCP Small-Servers</a></label></td>
-
-						  <td><label><input name="checkbox_udp_ss" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#udp_ss" target="_blank">UDP Small-Servers</a></label></td>
-
-						  <td><label><input name="checkbox_ip_options" type="checkbox" value="checked" checked />
-						  Drop <a href="help.html#ip_options" target="_blank">IP Options packets</a></label></td>
-						  </tr>
-						 
-						 </table>
-				
+					<div class="checkbox"><label><input type="checkbox" id="checkall" onclick="checkUncheckAll1a(this);" checked/>Select/Unselect All (Select All recommended)</label></div>
+					<br/>
+					<div class="col-md-6">
+					  <label><input id="checkbox_boot" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#boot" target="_blank">network booting</a></label><br/>						  
+						  <label><input id="checkbox_cdp" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#cdp" target="_blank">CDP</a></label><br/>	
+						  <label><input id="checkbox_svc" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#svc" target="_blank">config auto-load</a></label><br/>	
+						  <label><input id="checkbox_dhcp" type="checkbox" value="checked" checked />
+						  Disable <a href=help.html#dhcp target="_blank">DHCP</a></label><br/>	
+<label><input id="checkbox_pad" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#pad" target="_blank">pad</a></label><br/>	
+<label><input id="checkbox_finger" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#finger" target="_blank">IP Finger</a></label><br/>	
+						  <label><input id="checkbox_grat_arps" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#grat_arps" target="_blank">IP Gratuitous Arps</a></label><br/>	
+<label><input id="checkbox_http" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#http" target="_blank">HTTP Server</a></label><br/>	
 					</div>
+					<div class="col-md-6">
+<label><input id="checkbox_http_sec" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#http_sec" target="_blank">HTTP Secure Server</a></label><br/>
+					<label><input id="checkbox_name_srv" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#name_srv" target="_blank">IP Name Server</a></label><br/>	
+<label><input id="checkbox_src_rt" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#src_rt" target="_blank">IP Source Route</a></label><br/>	
+<label><input id="checkbox_lldp" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#lldp" target="_blank">LLDP</a></label><br/>	
+<label><input id="checkbox_tcp_ss" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#tcp_ss" target="_blank">TCP Small-Servers</a></label><br/>	
+<label><input id="checkbox_udp_ss" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#udp_ss" target="_blank">UDP Small-Servers</a></label><br/>	
+<label><input id="checkbox_ip_options" type="checkbox" value="checked" checked />
+						  Drop <a href="help.html#ip_options" target="_blank">IP Options packets</a></label>
+					</div>
+					
+					
+						
+						  
 				
-				</div>
+					</div></div>
 				
-				<div class="section">
+				</div></div>
+				
+				<div class="panel panel-default">
+  <div class="panel-body">
 				
 					<h3>Internet Interface Services</h3>
 					
 					<p>Let's disable the following services on the "outside" or Internet facing interface:</p>
 					
-					<div class="group">
+					<div class="panel panel-default">
+  <div class="panel-body">
 					
-						<table>
-
-						  <tr>
-						  <td><label><strong><input type="checkbox" name="checkall" onclick="checkUncheckAll1b1(this);" checked/>
-						  Select/Unselect All</strong></label><br /><b>(Select All recommended)</b></td>
-						  <td></td>
-						  <td></td>
-						  </tr>
-
-						  <tr>
-						  <td><label><input name="checkbox_wan_cdp_ena" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#cdp_ena" target="_blank">cdp (interface)</a></label></td>
-
-						  <td><label><input name="checkbox_wan_ip_bcast" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#ip_bcast" target="_blank">IP Directed Broadcast</a></label></td>
-
-						  <td><label><input name="checkbox_wan_redirects" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#redirects" target="_blank">IP Redirect</a></label></td>
-						  </tr>
-						  
-						  <tr>
-						  <td><label><input name="checkbox_wan_proxy_arp" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#proxy_arp" target="_blank">IP Proxy-arp</a></label></td>
-
-						  <td><label><input name="checkbox_wan_mask_reply" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#mask_reply" target="_blank">IP Mask-reply</a></label></td>
-
-						  <td><label><input name="checkbox_wan_unreachables" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#unreachables" target="_blank">IP Unreachables</a></label></td>
-						  </tr>
-
-						  <tr>
-						  <td><label><input name="checkbox_wan_mop" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#mop" target="_blank">mop</a></label></td>
-
-						  <td><label><input name="checkbox_wan_ntp" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#ntp" target="_blank">Network Time Protocol</a></label></td>
-						  <td></td>						  
-						  </tr>
-
-						</table>
-					
+						<div class="checkbox"><label><input type="checkbox" id="checkall" onclick="checkUncheckAll1b1(this);" checked/>Select/Unselect All (Select All recommended)</label></div>
+					<br/>
+					<div class="col-md-6">
+					<label><input id="checkbox_wan_cdp_ena" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#cdp_ena" target="_blank">cdp (interface)</a></label><br/><label><input id="checkbox_wan_ip_bcast" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#ip_bcast" target="_blank">IP Directed Broadcast</a></label><br/><label><input id="checkbox_wan_redirects" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#redirects" target="_blank">IP Redirect</a></label><br/><label><input id="checkbox_wan_proxy_arp" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#proxy_arp" target="_blank">IP Proxy-arp</a></label>
 					</div>
+					<div class="col-md-6">
+					<label><input id="checkbox_wan_mask_reply" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#mask_reply" target="_blank">IP Mask-reply</a></label><br/><label><input id="checkbox_wan_unreachables" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#unreachables" target="_blank">IP Unreachables</a></label><br/><label><input id="checkbox_wan_mop" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#mop" target="_blank">mop</a></label><br/><label><input id="checkbox_wan_ntp" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#ntp" target="_blank">Network Time Protocol</a></label>
+					</div>
+					
+					
+					</div></div>
 				
-				</div>
+				</div></div>
 				
-				<div class="section">
+				<div class="panel panel-default">
+  <div class="panel-body">
 				
 					<h3>Inside Interface Services</h3>
 					
 					<p>Disable the following services on the "inside" or firewall facing interface.</p>
 					
-					<div class="group">
-					
-						  <table>
-
-						  <tr>
-						  <td><label><strong><input type="checkbox" name="checkall" onclick="checkUncheckAll1b2(this);" checked/>
-						  Select/Unselect All</strong></label><br /><b>(Select All recommended)</b></td>
-						  <td></td>
-						  <td></td>
-						  </tr>
-
-						  <tr>
-						  <td><label><input name="checkbox_fw_cdp_ena" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#cdp_ena" target="_blank">cdp (interface)</a></label></td>
-
-						  <td><label><input name="checkbox_fw_ip_bcast" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#ip_bcast" target="_blank">IP Directed Broadcast</a></label></td>
-
-						  <td><label><input name="checkbox_fw_redirects" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#redirects" target="_blank">IP Redirect</a></label></td>
-						  </tr>
-						  
-						  <tr>
-						  <td><label><input name="checkbox_fw_proxy_arp" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#proxy_arp" target="_blank">IP Proxy-arp</a></label></td>
-
-						  <td><label><input name="checkbox_fw_mask_reply" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#mask_reply" target="_blank">IP Mask-reply</a></label></td>
-
-						  <td><label><input name="checkbox_fw_unreachables" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#unreachables" target="_blank">IP Unreachables</a></label></td>
-						  </tr>
-
-						  <tr>
-						  <td><label><input name="checkbox_fw_mop" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#mop" target="_blank">mop</a></label></td>
-
-						  <td><label><input name="checkbox_fw_ntp" type="checkbox" value="checked" checked />
-						  Disable <a href="help.html#ntp" target="_blank">Network Time Protocol</a></label></td>
-						  <td></td>
-						  </tr>
-
-						  </table>
-
+					<div class="panel panel-default">
+  <div class="panel-body">
+  <div class="checkbox"><label><input type="checkbox" id="checkall" onclick="checkUncheckAll1b2(this);" checked/>Select/Unselect All (Select All recommended)</label></div>
+					<br/>
+					<div class="col-md-6">
+					<label><input id="checkbox_fw_cdp_ena" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#cdp_ena" target="_blank">cdp (interface)</a></label><br/>
+						  <label><input id="checkbox_fw_ip_bcast" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#ip_bcast" target="_blank">IP Directed Broadcast</a></label><br/>
+						  <label><input id="checkbox_fw_redirects" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#redirects" target="_blank">IP Redirect</a></label><br/>
+						  <label><input id="checkbox_fw_proxy_arp" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#proxy_arp" target="_blank">IP Proxy-arp</a></label>
 					</div>
+					<div class="col-md-6">
+					<label><input id="checkbox_fw_mask_reply" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#mask_reply" target="_blank">IP Mask-reply</a></label><br/>
+						  <label><input id="checkbox_fw_unreachables" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#unreachables" target="_blank">IP Unreachables</a></label><br/>
+						  <label><input id="checkbox_fw_mop" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#mop" target="_blank">mop</a></label><br/>
+						  <label><input id="checkbox_fw_ntp" type="checkbox" value="checked" checked />
+						  Disable <a href="help.html#ntp" target="_blank">Network Time Protocol</a></label>
+					
+					</div>
+
+
+						  
+						  
+						  
+					</div></div></div>
 				
 				</div>
 				
-				<div class="section">
+				<div class="panel panel-default">
+  <div class="panel-body">
 				
 					<h3>Enable Good Services</h3>
 					
 					<p>These services can provide better security for your router and should be enabled:</p>
 					
-					<div class="group">
+					<div class="panel panel-default">
+  <div class="panel-body">
 					
-							<table>
-
-							  <tr>
-							  <td><label><strong><input type="checkbox" name="checkall" onclick="checkUncheckAll2a(this);" checked/>
-							  Select/Unselect All</strong></label><br /><b>(Select All Recommended)</b></td>
-							  <td></td>
-							  <td></td>
-							  </tr>
-							  
-							  <tr>
-							  <td><label><input name="checkbox_cef" type="checkbox" value="checked" checked />
-							  Enable <a href="help.html#cef" target="_blank">CEF</a></label></td>
-
-							  <td><label><input name="checkbox_tcp_keepalives_in" type="checkbox" value="checked" checked />
-							  Enable <a href="help.html#tcp_keepalives_in" target="_blank">TCP Keepalives In</a></label></td>
-
-							  <td><label><input name="checkbox_tcp_keepalives_out" type="checkbox" value="checked" checked />
-							  Enable <a href="help.html#tcp_keepalives_out" target="_blank">TCP Keepalives Out</a></label></td>
-							  </tr>
-							  
-							  <tr>
-							  <td><label><input name="checkbox_pw_encryption" type="checkbox" value="checked" checked />
-							  Enable <a href="help.html#pw_encryption" target="_blank">Password Encryption</a></label></td>
-
-							  <td><label><input name="checkbox_ssh_time_out" type="checkbox" value="checked" checked />
-							  Configure <a href="help.html#ssh_time_out" target="blank">SSH Time-out</a></label></td>
-
-							  <td><label><input name="checkbox_ssh_auth_retries" type="checkbox" value="checked" checked />
-							  Limit <a href="help.html#ssh_auth_retries" target="_blank">SSH Authentication retries to 3 </a></label></td>
-							  </tr>
-
-							  <tr>
-							  <td><label><input name="checkbox_subnet_zero" type="checkbox" value="checked" checked />
-							  Configure <a href="help.html#subnet_zero" target="blank">IP Subnet-zero</a></label></td>
-
-							  <td><label><input name="checkbox_ip_classless" type="checkbox" value="checked" checked />
-							  Configure <a href="help.html#ip_classless" target="_blank">IP Classless </a></label></td>
-							  <td></td>
-							  </tr>
-
-							</table>
+							<div class="checkbox"><label><input type="checkbox" id="checkall" onclick="checkUncheckAll2a(this);" checked/>Select/Unselect All (Select All recommended)</label></div>
+					<br/>
+					<div class="col-md-6">
+					<label><input id="checkbox_cef" type="checkbox" value="checked" checked />
+							  Enable <a href="help.html#cef" target="_blank">CEF</a></label><br/>
+							  <label><input id="checkbox_tcp_keepalives_in" type="checkbox" value="checked" checked />
+							  Enable <a href="help.html#tcp_keepalives_in" target="_blank">TCP Keepalives In</a></label><br/>
+							  <label><input id="checkbox_tcp_keepalives_out" type="checkbox" value="checked" checked />
+							  Enable <a href="help.html#tcp_keepalives_out" target="_blank">TCP Keepalives Out</a></label><br/>
+							  <label><input id="checkbox_pw_encryption" type="checkbox" value="checked" checked />
+							  Enable <a href="help.html#pw_encryption" target="_blank">Password Encryption</a></label><br/>
+					</div>
+					<div class="col-md-6">
+					<label><input id="checkbox_ssh_time_out" type="checkbox" value="checked" checked />
+							  Configure <a href="help.html#ssh_time_out" target="blank">SSH Time-out</a></label><br/>
+							  <label><input id="checkbox_ssh_auth_retries" type="checkbox" value="checked" checked />
+							  Limit <a href="help.html#ssh_auth_retries" target="_blank">SSH Authentication retries to 3 </a></label><br/>
+							  <label><input id="checkbox_subnet_zero" type="checkbox" value="checked" checked />
+							  Configure <a href="help.html#subnet_zero" target="blank">IP Subnet-zero</a></label><br/>
+							  <label><input id="checkbox_ip_classless" type="checkbox" value="checked" checked />
+							  Configure <a href="help.html#ip_classless" target="_blank">IP Classless </a></label>
+					</div>
 					
+					
+
+							  
 					</div>
 				
-				</div>
+				</div></div></div>
 				
-				<div class="section">
+				<div class="panel panel-default">
+  <div class="panel-body">
 				
 					<h3>Null Interface and Null Routing</h3>
 					
 					<p>Select whether to create a null interface (used for null, or "black hole" routing of unwanted traffic), and configure null routing.</p>
 					
-					<div class="group">
+					<div class="panel panel-default">
+  <div class="panel-body">
 					
-						<p><label><input name="checkbox_null" type="checkbox" value="checked" checked />
+						<p><label><input id="checkbox_null" type="checkbox" value="checked" checked />
 						Create a <a href="help.html#null" target="_blank">Null Interface</a></label> that will be used for null
 						routing.</p>
 					
-					</div>
+					</div></div>
 					
-					<div class="group">
+					<div class="panel panel-default">
+  <div class="panel-body">
 					
-					<p><label><input name="checkbox_null_route" type="checkbox" value="checked" checked />Configure <a href="help.html#null_route" target="_blank">null routing</a> to be used to dispose of invalid traffic.</label>
+					<p><label><input id="checkbox_null_route" type="checkbox" value="checked" checked />Configure <a href="help.html#null_route" target="_blank">null routing</a> to be used to dispose of invalid traffic.
 					
-					</div>
+					</div></div>
 					
-				</div>
-				
-				<div class="section">
-				
-					<h3>Service IP's and Information</h3>
-					
-					<p>IP addresses for services and configuring access to the router.</p>
-							
-						<div class="group">
-						
-							<h4>Loopback Interface</h4>
-							
-							<div class="singlequestion">
-							
-								<label><input class="text_input" name="checkbox_loopback" type="checkbox" value="checked" checked />Create a <a href="help.html#loopback" target="_blank">Loopback Interface</a></label>
-							
-							</div>
-							
-							<p>Enter an IP address for your loopback interface (if you don't know, enter 127.0.0.1).</p>
-							
-							<div class="singlequestion">
-							
-								 Loopback IP: 
-								 <input class="text_input" type="text" name="loopback_ip1" size="3" maxlength="3" placeholder="127" /> . 
-								 <input class="text_input" type="text" name="loopback_ip2" size="3" maxlength="3" placeholder="0" /> . 
-								 <input class="text_input" type="text" name="loopback_ip3" size="3" maxlength="3" placeholder="0" /> . 
-								 <input class="text_input" type="text" name="loopback_ip4" size="3" maxlength="3" placeholder="1" />
-							
-							</div>
-						
-						</div>
-						
-						<div class="group">
-						
-							<h4>NTP Servers</h4>
-							
-							<p>Enter the IP addresses for your Network Time Protocol (NTP) Servers. (If you don't know, find one <a href="https://support.ntp.org/bin/view/Servers/StratumTwoTimeServers">here</a>.)</p>
+				</div></div>	
+						<div class="panel panel-default">
+  <div class="panel-body">
+                            <h3>Service IP's and Information</h3>
 
-							<div class="singlequestion">
-							
-								Enable NTP:
-								<label><input class="text_input" name="checkbox_ntp_config" type="checkbox" value="checked" checked /></label>
-							
-							</div>
-							
-							<div class="singlequestion">
-							
-								NTP Server 1: 
-								<input class="text_input" type="text" name="ntp_svr1_ip1" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="ntp_svr1_ip2" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="ntp_svr1_ip3" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="ntp_svr1_ip4" size="3" maxlength="3" />
-							
-							</div>
-							
-							<div class="singlequestion">
-							
-								NTP Server 2: 
-								<input class="text_input" type="text" name="ntp_svr2_ip1" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="ntp_svr2_ip2" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="ntp_svr2_ip3" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="ntp_svr2_ip4" size="3" maxlength="3" />
-								
-							</div>
+                            <p>IP addresses for services and configuring access
+                            to the router.</p>
 
-						</div>
+                            <div class="panel panel-default">
+  <div class="panel-body">
+                                <h4>Loopback Interface</h4>
+								<label><input class="text_input" id="checkbox_loopback" type="checkbox" value="checked" checked=""> Create a <a href="help.html#loopback" target="_blank">Loopback Interface</a></label>
+
+                                <p>Enter an IP address for your loopback
+                                interface (if you don't know, enter
+                                127.0.0.1).</p>
+									
+									<div class="form-group">
+									  <label class="col-lg-3 control-label ">Loopback IP:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="loopback_ip1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="loopback_ip2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="loopback_ip3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="loopback_ip4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+                                </div>
+                            </div>
 						
-					</div>
+						<div class="panel panel-default">
+  <div class="panel-body">
+                                <h4>NTP Servers</h4>
+								<label><input class="text_input" id="checkbox_ntp_config" type="checkbox" value="checked" checked=""> Enable NTP</label>
+
+                                <p>Enter the IP addresses for your Network Time
+                                Protocol (NTP) Servers. (If you don't know,
+                                find one <a href=
+                                "http://support.ntp.org/bin/view/Servers/StratumTwoTimeServers">
+                                here</a>.)</p>
+								<div class="form-group">
+									  <label class="col-lg-3 control-label ">NTP Server 1:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="ntp_svr1_ip1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="ntp_svr1_ip2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="ntp_svr1_ip3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="ntp_svr1_ip4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+
+                                
+								<div class="form-group">
+									  <label class="col-lg-3 control-label ">NTP Server 2:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="ntp_svr2_ip1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="ntp_svr2_ip2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="ntp_svr2_ip3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="ntp_svr2_ip4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+                            </div></div>
 						
-					<div class="section">
+					</div></div>
+						
+					<div class="panel panel-default">
+  <div class="panel-body">
 						
 						<h4>Securing Access</h4>
 						
-						<div class="group">
+						<div class="panel panel-default">
+  <div class="panel-body">
 						
-							<h4>Configure Access, Authentication, and Authorization (AAA)</h4>
+							<h4>Configure Access, Authentication, and Authorization (AAA)</h5>
 							
 							<p>Enable AAA to be able to view the actions of users.</p>
 							
-							<label><input  class="text_input" name="checkbox_aaa" type="checkbox" value="checked" checked />Configure <a href="help.html#cmd_aaa" target="_blank">Local AAA</a>.</label>
+							<label><input  class="text_input" id="checkbox_aaa" type="checkbox" value="checked" checked />Configure <a href="help.html#cmd_aaa" target="_blank">Local AAA</a>.</label>
 						
-						</div>
+						</div></div>
 						
-						<div class="group">
+						<div class="panel panel-default">
+  <div class="panel-body">
 						
 							<h4>Remote Access Computer</h4>
 							
@@ -582,16 +873,17 @@
 							<div class="singlequestion">
 							
 								Trusted IP: 
-								<input class="text_input" type="text" name="vty_trusted_ip1" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="vty_trusted_ip2" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="vty_trusted_ip3" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="vty_trusted_ip4" size="3" maxlength="3" />
+								<input class="text_input" type="text" id="vty_trusted_ip1" size="3" maxlength="3" /> . 
+								<input class="text_input" type="text" id="vty_trusted_ip2" size="3" maxlength="3" /> . 
+								<input class="text_input" type="text" id="vty_trusted_ip3" size="3" maxlength="3" /> . 
+								<input class="text_input" type="text" id="vty_trusted_ip4" size="3" maxlength="3" />
 							
 							</div>
 						
-						</div>
+						</div></div>
 						
-						<div class="group">
+						<div class="panel panel-default">
+  <div class="panel-body">
 
 							<h4>Disable Aux Port</h4>
 								
@@ -599,33 +891,36 @@
 						
 							<div class="singlequestion">
 							
-								<label><input class="text_input" name="checkbox_aux" type="checkbox" value="checked" />Disable <a href="help.html#aux">aux port</a>.</label>
+								<label><input class="text_input" id="checkbox_aux" type="checkbox" value="checked" /> Disable <a href="help.html#aux">aux port</a>.
 							
 							</div>
 						
-						</div>
+						</div></div>
 						
-						<div class="group">
+						<div class="panel panel-default">
+  <div class="panel-body">
 						
 							<h4>Console Port</h4>
 							
 							<p>The console port is used to access the router locally using a serial connection and terminal emulation software like Putty or TeraTerm.</p>
 
-							<label><input class="text_input" name="checkbox_console" type="checkbox" value="checked" checked />Configure <a href="help.html#console" target="_blank">console port</a>.</label>
+							<label><input class="text_input" id="checkbox_console" type="checkbox" value="checked" checked />  Configure <a href="help.html#console" target="_blank">console port</a>.</label>
 						
-						</div>
+						</div></div>
 						
-						<div class="group">
+						<div class="panel panel-default">
+  <div class="panel-body">
 						
 							<h4>VTY Port</h4>
 							
 							<p>The virtual terminal (vty) ports are used to connect to the router with remote access protocols like SSH.</p>
 							
-							<label><input class="text_input" name="checkbox_vty" type="checkbox" value="checked" checked />Secure <a href="help.html#vty" target="_blank">vty ports</a>.</label>
+							<label><input class="text_input" id="checkbox_vty" type="checkbox" value="checked" checked /> Secure <a href="help.html#vty" target="_blank">vty ports</a>.</label>
 						
-						</div>
+						</div></div>
 						
-						<div class="group">
+						<div class="panel panel-default">
+  <div class="panel-body">
 						
 							<h4>Access Control Lists (ACL's)</h4>
 							
@@ -633,19 +928,20 @@
 						
 							<div class="singlequestion">
 							
-								<label><input class="text_input" name="checkbox_outside_acl" type="checkbox" value="checked" checked />Create <a href="help.html#outside_acl" target="_blank">Outside ACL</a>.</label>
+								<label><input class="text_input" id="checkbox_outside_acl" type="checkbox" value="checked" checked /> Create <a href="help.html#outside_acl" target="_blank">Outside ACL</a>.</label>
 							
 							</div>
 
 							<div class="singlequestion">
 								
-									<label><input name="checkbox_inside_acl" type="checkbox" value="checked" checked />Create <a href="help.html#inside_acl" target="_blank">Inside ACL</a>.</label>
+									<label><input id="checkbox_inside_acl" type="checkbox" value="checked" checked /> Create <a href="help.html#inside_acl" target="_blank">Inside ACL</a>.</label>
 								
 							</div>
 							
-						</div>
+						</div></div>
 						
-						<div class="group">
+						<div class="panel panel-default">
+  <div class="panel-body">
 						
 						<h4>Restricting Command Access</h4>
 						
@@ -653,167 +949,251 @@
 						
 							<div class="singlequestion">
 
-								<label><input name="checkbox_cmd_access" type="checkbox" value="checked" checked />Restrict Access to <a href="help.html#cmd_access" target="_blank">High Risk Commands</a>.</label>
+								<label><input id="checkbox_cmd_access" type="checkbox" value="checked" checked /> Restrict Access to <a href="help.html#cmd_access" target="_blank">High Risk Commands</a>.</label>
 							
 							</div>
 						
-						</div>
+						</div></div>
 					
-					</div>
+					</div></div>
 						
-					<div class="group">
-					
-						<h4>User Information</h4>
-						
-						<p>Enter a username and password (change the username, password, and enable secret password in the text file you receive prior to loading into the router).</p>
-						
-						<div class="singlequestion">
-						
-							Username: <input class="text_input" type="text" name="username" size="25" maxlength="25" placeholder="Change before use..." />
+					<div class="panel panel-default">
+  <div class="panel-body">
+                                <h4>User Information</h4>
 
-						</div>
-						
-						<div class="singlequestion">
-						
-							Password: <input class="text_input" type="password" name="u_password" size="25" maxlength="25" placeholder="Change before use..." />
-						
-						</div>
-						
-						<div class="singlequestion">
-						
-							Enable Secret Password:  <input class="text_input" type="password" name="enable_secret_pw" size="25" maxlength="25" placeholder="Change before use..." />
-						
-						</div>
-					
-					</div>
+                                <p>Enter a user name and password (change the
+                                user name, password, and enable secret password
+                                in the text file you receive prior to loading
+                                into the router).</p>
+
+                                								
+									<label class="col-lg-3 control-label ">User name:</label>
+
+                                        <ul style="list-style-type: none;">
+                                            <li><input class=
+                                            "text_input form-control" id=
+                                            "username" maxlength="25"
+                                            placeholder="Change before use..." size="25" style=
+                                            "max-width:20em;" type="text"></li>
+                                        </ul>
+								<label class="col-lg-3 control-label ">Password:</label>
+
+                                        <ul style="list-style-type: none;">
+                                            <li><input class=
+                                            "text_input form-control" id=
+                                            "u_password" maxlength="25"
+                                            placeholder="Change before use..." size="25" style=
+                                            "max-width:20em;" type="text"></li>
+                                        </ul>
+								<label class="col-lg-3 control-label ">Enable Secret Password:</label>
+
+                                        <ul style="list-style-type: none;">
+                                            <li><input class=
+                                            "text_input form-control" id=
+                                            "enable_secret_pw" maxlength="25"
+                                            placeholder="Change before use..." size="25" style=
+                                            "max-width:20em;" type="text"></li>
+                                        </ul>
+                            </div></div>
 				
-				<div class="section">
-				
-					<h3>Logging</h3>
-					
-					<p>Provide some information to set up logging.</p>
-					
-					<div class="group">
+				<div class="panel panel-default">
+  <div class="panel-body">
+                            <h3>Logging</h3>
 
-						<p><label><input name="radio_logging" type="radio" value="local_syslog" /> Configure Syslog to use a <a href="help.html#syslog_local" target="_blank">port on this router</a></label></p>
+                            <p>Provide some information to set up logging.</p>
 
-						<p>Interface name and IP address.</p>
+                           <div class="panel panel-default">
+  <div class="panel-body">
+                                <p><label><input name="radio_logging" type=
+                                "radio" value="local_syslog"> Configure Syslog
+                                to use a <a href="help.html#syslog_local">port
+                                on this router</a></label></p>
 
-							<div class="singlequestion">
-							
-								Local DMZ Interface Name:
+                                <p>Interface name and IP address.</p>
 
-								<input class="text_input" type="text" name="local_dmz_name" size="25" maxlength="25" placeholder="For example ethernet0/3..." />
-							   
-							</div>
+								<label class="col-lg-3 control-label ">Local DMZ Interface Name:</label>
 
-							<div class="singlequestion">
-
-								Local DMZ Interface IP:
-
-								<input class="text_input" type="text" name="local_dmz_ip1" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="local_dmz_ip2" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="local_dmz_ip3" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="local_dmz_ip4" size="3" maxlength="3" />
+                                        <ul style="list-style-type: none;">
+                                            <li><input class=
+                                            "text_input form-control" id=
+                                            "local_dmz_name" maxlength="25"
+                                            placeholder="ethernet0" size="25" style=
+                                            "max-width:20em;" type="text"></li>
+                                        </ul>
+								<div class="form-group">
+									  <label class="col-lg-3 control-label ">Local DMZ Interface IP:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_ip1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_ip2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_ip3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_ip4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+                                <p>Syslog server IP address and DMZ subnet
+                                mask.</p>
+								<div class="form-group">
+									  <label class="col-lg-3 control-label ">Local DMZ Syslog Server IP:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_syslog_ip1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_syslog_ip2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_syslog_ip3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_syslog_ip4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
 								
-							</div>
-						
-					</div>
+								<div class="form-group">
+									  <label class="col-lg-3 control-label ">Local DMZ Interface Mask:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_mask1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_mask2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_mask3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="local_dmz_mask4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+                            </div></div>
+
+                            <div class="panel panel-default">
+  <div class="panel-body">
+                                <p><label><input name="radio_logging" type=
+                                "radio" value="dmz_syslog"> Configure Syslog to
+                                use a <a href="help.html#syslog_fw_dmz">DMZ on
+                                the Firewall</a></label></p>
+
+								<div class="form-group">
+									  <label class="col-lg-3 control-label ">Firewall DMZ Syslog Server IP address:</label>
+									  <div class="col-lg-12">
+										<div class="form-inline">
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_syslog_ip1" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_syslog_ip2" class="form-control" >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_syslog_ip3" class="form-control"  >
+											</div>
+										  </div><b>.</b>
+										  <div class="form-group ">
+											<div class="col-lg-12"> 
+											  <input type="text" size="3" maxlength="3" id="firewall_syslog_ip4" class="form-control" >
+											</div>
+										  </div>
+										</div>
+									  </div>
+									</div>
+                            </div></div>
+
+                            <div class="panel panel-default">
+  <div class="panel-body">
+                                <label><input checked="checked" name=
+                                "radio_logging" type="radio" value=
+                                "local_logging"> Configure <a href=
+                                "help.html#local_logging">local logging
+                                only</a></label>
+                            </div></div>
+                        </div></div>			
 					
-					<div class="group">
-					
-						<p>Syslog server IP address and DMZ subnet mask.</p>
+				<center><button class="btn btn-default"
+                        onclick="Process()" type="button">Generate Configuration</button></center>
+                    </form>&nbsp;
 
-							<div class="singlequestion">
-							
-							   Local DMZ Syslog Server IP:
+                    <form id="form2" name="form2">
+                        <div style="float:left;width:100%;">
+                            <textarea class="code-font" id="processed-code"
+                            placeholder="Code" style=
+                            "min-height: 400px;line-height: 1.2;min-width: 100%;">
 
-								<input class="text_input" type="text" name="local_dmz_syslog_ip1" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="local_dmz_syslog_ip2" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="local_dmz_syslog_ip3" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="local_dmz_syslog_ip4" size="3" maxlength="3" />
+</textarea>
+                        </div>
+                    </form>
 
-							</div>
-
-							<div class="singlequestion">
-							
-							   Local DMZ Interface Mask:
-
-								<input class="text_input" type="text" name="local_dmz_mask1" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="local_dmz_mask2" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="local_dmz_mask3" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="local_dmz_mask4" size="3" maxlength="3" />
-							
-							</div>
-						
-					</div>
-						
-					<div class="group">
-
-						<p><label><input name="radio_logging" type="radio" value="dmz_syslog" /> Configure Syslog to use a <a href="help.html#syslog_fw_dmz" target="_blank">DMZ on the Firewall</a></label></p>
-						
-							<div class="singlequestion">
-									
-							   Firewall DMZ Syslog Server IP address:
-
-								<input class="text_input" type="text" name="firewall_syslog_ip1" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="firewall_syslog_ip2" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="firewall_syslog_ip3" size="3" maxlength="3" /> . 
-								<input class="text_input" type="text" name="firewall_syslog_ip4" size="3" maxlength="3" />
-
-							</div>
-						
-					</div>
-					
-					<div class="group">
-						
-						<label><input name="radio_logging" type="radio" value="local_logging" checked="checked" /> Configure <a href="help.html#local_logging" target="_blank">local logging only</a></label>
-					
-					</div>
-					
-				</div>				
-					
-				<input class="submit_input" type="submit" name="submit" value="Submit">
-				
-			</form>
-		
-		</main>
-			
-		<div class="disclaimer">
-
-			<a href="https://sourceforge.net/projects/borderroutersec">
-			<img  class="repo-logo" src="https://sflogo.sourceforge.net/sflogo.php?group_id=304482&amp;type=12"
-			width="120" height="30" alt="Get BRST - Border Router Security Tool at
-			SourceForge.net." /></a>
-			
-			<h3>Disclaimer and Licensing</h3>
-			
-			<p>The "fine print."</p>
-
-			<p>This software is not sponsored by, endorsed by or affiliated with Cisco Systems, Inc.  Cisco, Cisco Systems, and IOS are registered trademarks of Cisco Systems, Inc. in the USA and certain other countries.  All other trademarks are trademarks of their respective owners.</p>
-
-			<p>BRST - Border Router Security Tool, Helps administrators secure their border routers.
-			Copyright &copy; 2014 Ted LeRoy</p>
-
-			<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
-
-			<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.</p>
-
-			<p>A local copy of the license can be found at <a href="copying.html">copying</a>.</p>
-
-			<p>theodore_dot_leroy_at_yahoo_dot_com</p>
-
-			<p>Source code can be obtained at:  <a href="https://sourceforge.net/projects/borderroutersec/">
-			https://sourceforge.net/projects/borderroutersec/</a></p>
-			
-			<a href="https://jigsaw.w3.org/css-validator/check/referer"> <img class="left-logo" style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" /></a>
-		
-			<a href="https://www.gnu.org/licenses/"><img class="right-logo" alt="Affero GPL v3 Logo" src="images/agplv3-88x31.png"></a>
-		
+	<footer>
+		<div class="row">
+			<div class="col-lg-12">	
+				<div class="footer-font">
+					<h4>Disclaimer and Licensing</h4>
+					<p>The "fine print."</p>
+					<p>This software is not sponsored by, endorsed by or affiliated with Cisco Systems, Inc.  Cisco, Cisco Systems, and IOS are registered trademarks of Cisco Systems, Inc. in the USA and certain other countries.  All other trademarks are trademarks of their respective owners.</p>
+					<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+					<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.</p>
+					<p>A local copy of the license can be found at <a href="copying.html">copying</a>.</p>
+				</div>
+			</div>
 		</div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="list-unstyled">
+              <li><a href="https://www.borderroutersec.org/">&copy; 2015 Ted LeRoy</a></li>
+              <li class="pull-right"><a href="https://www.borderroutersec.org/">BorderRouterSec.org</a></li>
+              <li class="pull-right"><a href="https://github.com/TedLeRoy/BRST">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+    </footer>
+					
+</div>
 		
-	</div>
-
+ 
+	<script src="js/jquery-1.10.2.min.js"></script> <script src="js/bootstrap.min.js"></script> <script src="js/bootswatch.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>About | BRST</title>
+    <title>Troubleshooting | BRST</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="css/bootstrap.css" media="screen" rel="stylesheet">
     <link href="css/bootswatch.min.css" rel="stylesheet">
@@ -67,43 +67,36 @@
 	<div class="container">
 		<div class="row">
           <div class="col-lg-12">
-		  <br/>
-		  <h2>About</h2>
-		<p>Some background on the BRST Open Source Project.</p>  
-			
-			<p>It began as a Master's Project for an Information Technology Degree at the
-			Rochester Institute of Technology.  The originator of the project, Ted LeRoy, was working as a Data Engineer
-			and was, among other things, installing border routers for small and medium sized companies.  They were mostly
-			Nortel and Cisco devices.  He noticed that Cisco routers are shipped in a relatively insecure state and that
-			a lot of work was required to secure them and bring them in line with best practices such as those outlined in
-			the National Securty Agency's System and Network Attack Center (NSA SNAC)
-			<a href="http://www.nsa.gov/ia/_files/routers/C4-040R-02.pdf" target="_blank">Guide</a>, Cisco's IOS Security Configuration
-			<a href="http://www.cisco.com/en/US/docs/ios/security/configuration/guide/12_4/sec_12_4_book.html" target="_blank">Guide</a>,
-			or books like Thomas Akins' <a href="http://oreilly.com/catalog/9780596001667"  target="_blank">Securing Cisco Routers</a>.</p>
-
-			<p>The is BRST focuses on border routers for small to medium sized companies because a border router usually sits outside
-			the firewall so it is exposed to the world, and because administrators at small to medium sized companies may not
-			have the Cisco skills to implement a secure configuration without some help or a lot of studying.</p>
-
-			<p>While tools like Cisco Auto Secure, and the Router Audit Tool (RAT) exist, they are not web based, and do not
-			offer the administrator much flexibility in choosing services to enable or disable.  We can thank Professor Pete
-			Lutz for insisting that a GUI be used and for strongly encouraging an HTML interface.  Web based means it works
-			on any PC with a browser, it's accessible from anywhere, and it's an interface almost everyone is familiar with.</p>
-
-			<p>The goal of this project is to make a free, widely available utility that makes the job of securing Cisco
-			border routers easier for all.  </p>
-					
-				
-			
-			</div>
+		  <h2>Troubleshooting</h2>
+		  <hr>
+		  <p>
+		  <h5>Garbage When Copying Configuration To Router</h5>
+		  <b>Most likely cause:</b><ul><li>Characters entering Console port too quickly.</li></ul>
+		  <b>Solution:</b> <ul><li>Enter a transmit delay of 5 msec per character and 5msec per line.</li><li>In TeraTerm, go to Setup, then Serial Port in the menu. In Transmit Delay at the bottom of the Serial Port Setup window, enter the delay.</li></ul>
+		  </p>
+		  <hr>
+		  <p>
+		  <h5>Commands Not Taken By Router</h5>
+		  <b>Most likely cause:</b><ul><li>The hardware or software version you are running may not support the commands the BRST generated.</li></ul>
+		  <b>Solution:</b><ul><li>Some commands such as those related to MOP, Archiving, or lldp can be safely ignored.</li><li>Others may have to be
+				looked into more deeply.</li><li>You can use the <a href="https://tools.cisco.com/Support/CLILookup/cltSearchAction.do" target="_blank">Cisco Command Lookup Tool</a>
+				when in doubt.  You will have to create a Cisco login
+				to use it.</li></ul>
+		  </p>
+		  <hr>
+		  <p>
+		  <h5>Traffic Will Not Pass After BRST Config Copied</h5>
+		  <b>Solution:</b><ul><li>Standard router troubleshooting applies.</li><li>Ping steadily outward until you find something you cannot reach.</li><li>Check default route..</li><li>Check Router Logs for denials. Check that interfaces are connected and up.</li><li>Look over the log you captured when you pasted the BRST configuration into the router for errors. Try to fix those.</li><li>If you cannot find the problem and have to bring the router back online, do a write-erase, reload, and copy the original configration back into the router until you find the problem or have more time to work on it.</li></ul>
+		  </p>
+		  
 				
 				
           </div>
+        </div>
 	
 	
 	
 	<footer>
-	
 		<div class="row">
 			<div class="col-lg-12">	
 				<div class="footer-font">
@@ -116,7 +109,6 @@
 				</div>
 			</div>
 		</div>
-			
         <div class="row">
           <div class="col-lg-12">
             <ul class="list-unstyled">
@@ -126,9 +118,9 @@
             </ul>
           </div>
         </div>
-      </footer>
+    </footer>
 	</div>
-	<script src="js/jquery-1.10.2.min.js"></script>
+	 <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootswatch.js"></script>
 </body>
