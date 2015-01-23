@@ -18,6 +18,11 @@ E-mail address:
 theodore.leroy@yahoo.com
 
 Release Quality:
+As of 23 January, 2015
+Converted all php to javascript (thanks Abhi!).
+
+Converted css to bootstrap.
+
 As of 9 January, 2015
 Corrected nested tables on the faq.html and index.html pages so they now validate.
 
