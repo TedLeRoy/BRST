@@ -66,67 +66,108 @@
     </div>
 	<div class="container">
 		<div class="row">
-          <div class="col-lg-12">
-		  <br/>
-		  <h2>Frequently Asked Questions</h2><br/>
-		  
-		<h4>Can I trust this site?</h4>
-		<p>Since the software is open source, and freely available, you can have a look for yourself. There are no features that surreptitiously store or send a copy of your file anywhere. That said, I don't own the server this is housed on, or any gear in between, so some precautions are in order. See "What precautions should I take?" below.</p><br/>
-		<h4>What precautions should I take?</h4>
-		<ul><li>Always have a backup of the running configuration (keep before and after changes copies).</li><li>Do not use the user name or password you entered on the BRST form (change it before pasting it into the router).</li><li>Consider using a fictitious outside IP Address and Gateway.</li><li>If you're truly paranoid, or you want to modify the BRST, download the software, fire up a web server with php enabled, and run it yourself.</li></ul><br/>
+			<div class="col-lg-12">
+				<br/>
+				<h2>Frequently Asked Questions</h2><br/>
+			  
+				<h4>Can I trust this site?</h4>
+				<p>Since the software is open source, and freely available, you can have a look for yourself. There are no features that surreptitiously store or send a copy of your file anywhere. Some security related features built into the BRST include:</p> 
+				
+				<ul>
+					<li>Hosted BRST is via an HTTPS connection.</li>
+					<li>A valid certificate has been purchased and applied.</li>
+					<li>Processing is done on the client side using Javascript.</li>
+				</ul>
+
+				<p>That said, I don't own the server this is housed on, or any gear in between, so some precautions are in order. See "What precautions should I take?" below.</p>
+
+				<h4>What is a border router?</h4>
+
+				<p>A border router in the context of the BRST is a router that is positioned between a firewall and the Internet. They were often used as a conduit to connect a T1 or fractional T1 to a firewall which required an Ethernet connection.</p>
+				<p>If you don't have a border router, and wonder what security measures you can take, or what the BRST can do for you, see "What if I don't have a border router?", or "If I don't have a border router how can I use the BRST?" below.</p>
+
+				<h4>What precautions should I take?</h4>
+
+				<ul>
+					<li>Always have a backup of the running configuration (keep before and after changes copies).</li>
+					<li>Do not use the user name or password you entered on the BRST form (change it before pasting it into the router).</li>
+					<li>Consider using a fictitious outside IP Address and Gateway.</li>
+					<li>If you're still concerned, or you want to modify the BRST, download the software, fire up a web server, and run it yourself.</li>
+				</ul>
+				
 				<h4>I used the tool and now my router's borked. What can I do?</h4>
+
 				<p>Hopefully, you followed the steps on the <a href="index.html">Start Here</a> page and can get back up and running fairly quickly.</p>
-					
-					<div>
-					
+						
+				<ol>
+					<li>Restore your router using the configuration file you created prior to using the BRST.</li>
+					<li>Look over the session information you recorded when you tried to run the utility.</li>
+					<li>Try correcting the error and reinstalling the configuration file.</li>
+					<li>If for some crazy reason, you don't have a backup of the configuration, you should only need a few items to get back on line:</li>
+					<li>Obtain the following information and enter it into the router:
 						<ol>
-							<li>Restore your router using the configuration file you created prior to using the BRST.</li>
-							<li>Look over the session information you recorded when you tried to run the utility.</li>
-							<li>Try correcting the error and reinstalling the configuration file.</li>
-							<li>If for some crazy reason, you don't have a backup of the configuration, you should only need a few items to get back on line:</li>
-							<li>Obtain the following information and enter it into the router:
-								<ol>
-									<li>The gateway for your router (should be provided by your Internet Service Provider (ISP)).</li>
-									<li>The interface, IP address, and subnet mask for your connection to your ISP (should also be provided by your ISP).</li>
-									<li>The interface, IP address and subnet mask for your internal connection (you should know this or be able to find it out).</li>
-								</ol>
-							</li>
-							<li>If the error is with the BRST itself, please contact me so I can correct the problem.</li>
+							<li>The gateway for your router (should be provided by your Internet Service Provider (ISP)).</li>
+							<li>The interface, IP address, and subnet mask for your connection to your ISP (should also be provided by your ISP).</li>
+							<li>The interface, IP address and subnet mask for your internal connection (you should know this or be able to find it out).</li>
 						</ol>
+					</li>
+					<li>If the error is with the BRST itself, please contact me so I can correct the problem.</li>
+				</ol>
+				
+				<h4>What if I don't have a border router?</h4>
+				
+				<p>If you don't have a border router, you can still make sure your border is secure. If you don't have a high priced corporate grade firewall from a company like Cisco or Juniper, and want an open source alternative, consider a firewall like <a href="https://pfsense.org/">PFSense</a>.</p>
+				
+				<p>If you have other Cisco routers or switches within your network, read "If I don't have a border router how can I use the BRST?" below.</p>
+				
+				<h4>If I don't have a border router how can I use the BRST?</h4>
+				
+				<p>With Ethernet hand off's from ISP's more and more common, border routers are less often used. If you don't have a border router, but still have Cisco routers and layer 3 switches, you can use the BRST to:</p>
+				
+				<ul>
+				
+					<li>Generate a secure configuration template you can then adapt to secure other Cisco devices. There are some things to be aware of if you do this:</li>
 					
-					</div>
+					<ul>
+						<li>The configuration file generated has built-in Access Control Lists (ACL's) which you'll have to locate and modify by hand to fit your network.</li>
+						<li>You may have more interfaces or VLAN interfaces to handle than the tool was designed for. Try to replicate the intent of the ACL's for the various interfaces.</li>
+						<li>There are additional measures you'll want to take on your Cisco switches, but many of the same configuration settings will apply to layer 3 switches.</li>
+					</ul>
+				
+				</ul>
 					
+						
 			</div>
-				
-				
-          </div>
+					
+					
+		</div>
 
 	
 	
 	
-	<footer>
-		<div class="row">
-			<div class="col-lg-12">	
-				<div class="footer-font text-center">
-					<h5>Disclaimer and Licensing</h5>
-					<p>The "fine print."</p>
-					<p>This software is not sponsored by, endorsed by or affiliated with Cisco Systems, Inc.  Cisco, Cisco Systems, and IOS are registered trademarks of Cisco Systems, Inc. in the USA and certain other countries.  All other trademarks are trademarks of their respective owners.</p>
-					<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
-					<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.</p>
-					<p>A local copy of the license can be found at <a href="copying.html">copying</a>.</p>&nbsp;
+		<footer>
+			<div class="row">
+				<div class="col-lg-12">	
+					<div class="footer-font text-center">
+						<h5>Disclaimer and Licensing</h5>
+						<p>The "fine print."</p>
+						<p>This software is not sponsored by, endorsed by or affiliated with Cisco Systems, Inc.  Cisco, Cisco Systems, and IOS are registered trademarks of Cisco Systems, Inc. in the USA and certain other countries.  All other trademarks are trademarks of their respective owners.</p>
+						<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+						<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.</p>
+						<p>A local copy of the license can be found at <a href="copying.html">copying</a>.</p>&nbsp;
+					</div>
 				</div>
 			</div>
-		</div>
-        <div class="row">
-          <div class="col-lg-12">
-            <ul class="list-unstyled">
-              <li><a href="https://www.borderroutersec.org/">&copy; 2015 Ted LeRoy</a></li>
-              <li class="pull-right"><a href="https://www.borderroutersec.org/">BorderRouterSec.org</a></li>
-              <li class="pull-right"><a href="https://github.com/TedLeRoy/BRST">GitHub</a></li>
-            </ul>
-          </div>
-        </div>
-    </footer>
+			<div class="row">
+			  <div class="col-lg-12">
+				<ul class="list-unstyled">
+				  <li><a href="https://www.borderroutersec.org/">&copy; 2015 Ted LeRoy</a></li>
+				  <li class="pull-right"><a href="https://www.borderroutersec.org/">BorderRouterSec.org</a></li>
+				  <li class="pull-right"><a href="https://github.com/TedLeRoy/BRST">GitHub</a></li>
+				</ul>
+			  </div>
+			</div>
+		</footer>
 
 	</div>
 	<script src="js/jquery-1.10.2.min.js"></script>
