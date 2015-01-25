@@ -81,6 +81,10 @@ function Process() {
     var ntp_svr1_ip2 = document.getElementById('ntp_svr1_ip2').value;
     var ntp_svr1_ip3 = document.getElementById('ntp_svr1_ip3').value;
     var ntp_svr1_ip4 = document.getElementById('ntp_svr1_ip4').value;
+    var ntp_svr2_ip1 = document.getElementById('ntp_svr2_ip1').value;
+    var ntp_svr2_ip2 = document.getElementById('ntp_svr2_ip2').value;
+    var ntp_svr2_ip3 = document.getElementById('ntp_svr2_ip3').value;
+    var ntp_svr2_ip4 = document.getElementById('ntp_svr2_ip4').value;
     var local_dmz_mask1 = document.getElementById('local_dmz_mask1').value;
     var local_dmz_mask2 = document.getElementById('local_dmz_mask2').value;
     var local_dmz_mask3 = document.getElementById('local_dmz_mask3').value;

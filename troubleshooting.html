@@ -73,7 +73,6 @@
 		  <h5>Garbage When Copying Configuration To Router</h5>
 		  <b>Most likely cause:</b><ul><li>Characters entering Console port too quickly.</li></ul>
 		  <b>Solution:</b> <ul><li>Enter a transmit delay of 5 msec per character and 5msec per line.</li><li>In TeraTerm, go to Setup, then Serial Port in the menu. In Transmit Delay at the bottom of the Serial Port Setup window, enter the delay.</li></ul>
-		  </p>
 		  <hr>
 		  <p>
 		  <h5>Commands Not Taken By Router</h5>
@@ -82,12 +81,10 @@
 				looked into more deeply.</li><li>You can use the <a href="https://tools.cisco.com/Support/CLILookup/cltSearchAction.do" target="_blank">Cisco Command Lookup Tool</a>
 				when in doubt.  You will have to create a Cisco login
 				to use it.</li></ul>
-		  </p>
 		  <hr>
 		  <p>
 		  <h5>Traffic Will Not Pass After BRST Config Copied</h5>
 		  <b>Solution:</b><ul><li>Standard router troubleshooting applies.</li><li>Ping steadily outward until you find something you cannot reach.</li><li>Check default route..</li><li>Check Router Logs for denials. Check that interfaces are connected and up.</li><li>Look over the log you captured when you pasted the BRST configuration into the router for errors. Try to fix those.</li><li>If you cannot find the problem and have to bring the router back online, do a write-erase, reload, and copy the original configration back into the router until you find the problem or have more time to work on it.</li></ul>
-		  </p>
 		  
 				
 				
@@ -99,13 +96,13 @@
 	<footer>
 		<div class="row">
 			<div class="col-lg-12">	
-				<div class="footer-font">
-					<h4>Disclaimer and Licensing</h4>
+				<div class="footer-font text-center">
+					<h5>Disclaimer and Licensing</h5>
 					<p>The "fine print."</p>
 					<p>This software is not sponsored by, endorsed by or affiliated with Cisco Systems, Inc.  Cisco, Cisco Systems, and IOS are registered trademarks of Cisco Systems, Inc. in the USA and certain other countries.  All other trademarks are trademarks of their respective owners.</p>
 					<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
 					<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.</p>
-					<p>A local copy of the license can be found at <a href="copying.html">copying</a>.</p>
+					<p>A local copy of the license can be found at <a href="copying.html">copying</a>.</p>&nbsp;
 				</div>
 			</div>
 		</div>
@@ -119,6 +116,7 @@
           </div>
         </div>
     </footer>
+
 	</div>
 	 <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

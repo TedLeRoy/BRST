@@ -72,7 +72,8 @@
 		  <p>Here are the steps to generate a crypto key on your router:</p>
 		  <form>
 					<div style="float:left;width:100%;">
-			<textarea placeholder="Code"  class="code-font" style="min-height: 35em;line-height: 1.2;min-width: 100%;">! RSA Cryptography Key Generation Instructions for the brst&#13;&#10;! The following commands must be entered at the enable prompt to&#13;&#10;! configure a domain name and to generate a crypto-key:&#13;&#10;!&#13;&#10;configure terminal&#13;&#10;!&#13;&#10;!Replace RouterOne below with your preferred router hostname.&#13;&#10;!&#13;&#10;hostname RouterOne&#13;&#10;!&#13;&#10;!Replace mydomain.com with your domain name.&#13;&#10;!&#13;&#10;ip domain-name mydomain.com&#13;&#10;!&#13;&#10;crypto key generate rsa&#13;&#10;!&#13;&#10;! (You will see the following output on the router).&#13;&#10;!&#13;&#10;! The name for the keys will be: RouterOne&#13;&#10;! Choose the size of the key modulus in the range of 360 to 2048 for your&#13;&#10;!   General Purpose Keys. Choosing a key modulus greater than 512 may take&#13;&#10;!   a few minutes.&#13;&#10;! 1024 or higher is recommended if it is legal for use in your jurisdiction.)&#13;&#10;!&#13;&#10;! (Note: you will have to input a number here.&#13;&#10;! How many bits in the modulus [512]: 1024&#13;&#10;!&#13;&#10;! Generating RSA keys ...&#13;&#10;! [OK]</textarea>
+			<textarea placeholder="Code"  class="code-font" style="min-height: 5em;line-height: 1.2;min-width: 100%;">! Enter the following line to generate a key with a modulus of 2048 bits:
+crypto key generate rsa general-keys modulus 2048</textarea>
 			</div>
 			</form>
           </div>
@@ -81,13 +82,13 @@
 	<footer>
 		<div class="row">
 			<div class="col-lg-12">	
-				<div class="footer-font">
-					<h4>Disclaimer and Licensing</h4>
+				<div class="footer-font text-center">
+					<h5>Disclaimer and Licensing</h5>
 					<p>The "fine print."</p>
 					<p>This software is not sponsored by, endorsed by or affiliated with Cisco Systems, Inc.  Cisco, Cisco Systems, and IOS are registered trademarks of Cisco Systems, Inc. in the USA and certain other countries.  All other trademarks are trademarks of their respective owners.</p>
 					<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
 					<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more details.</p>
-					<p>A local copy of the license can be found at <a href="copying.html">copying</a>.</p>
+					<p>A local copy of the license can be found at <a href="copying.html">copying</a>.</p>&nbsp;
 				</div>
 			</div>
 		</div>
@@ -101,6 +102,7 @@
           </div>
         </div>
     </footer>
+
 	</div>
 	 <script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
