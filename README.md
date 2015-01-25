@@ -43,6 +43,7 @@ brst/
 ├── normal.html
 ├── README.md
 ├── services-and-protocols.html
+├── template.html
 ├── troubleshooting.html
 ├── css/
 │   ├── bootstrap.css
