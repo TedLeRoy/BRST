@@ -56,18 +56,18 @@ brst/
 │   ├── bootswatch.min.css
 │   ├── index.html
 ├── fonts/
-│	├── glyphicons-halflings-regular.eot
-│	├── glyphicons-halflings-regular.svg
-│	├── glyphicons-halflings-regular.ttf
-│	├── glyphicons-halflings-regular.woff
-│	├── glyphicons-halflings-regular.woff2
-│	├── index.html
+│   ├── glyphicons-halflings-regular.eot
+│   ├── glyphicons-halflings-regular.svg
+│   ├── glyphicons-halflings-regular.ttf
+│   ├── glyphicons-halflings-regular.woff
+│   ├── glyphicons-halflings-regular.woff2
+│   ├── index.html
 ├── img/
-│	├── brst-brand.png
-│	├── BRST-favicon-32x32.png
-│	├── brst-logo.png
-│	├── brst-logo-big.png
-│	├── index.html
+│   ├── brst-brand.png
+│   ├── BRST-favicon-32x32.png
+│   ├── brst-logo.png
+│   ├── brst-logo-big.png
+│   ├── index.html
 ├── js/
 │   ├── bootstrap.js
 │   ├── bootstrap.min.js
