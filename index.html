@@ -28,37 +28,172 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a id="welcome-to-the-brsts-github-page" class="anchor" href="#welcome-to-the-brsts-github-page" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the BRST's GitHub Page.</h3>
+        <p>The BRST is a web based utility that requests information about your environment and generates a secure Cisco router configuration based on your input.</p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>To get started, check out <a href="https://borderroutersec.org">https://borderroutersec.org</a>!</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<h2>
+<a id="table-of-contents" class="anchor" href="#table-of-contents" aria-hidden="true"><span class="octicon octicon-link"></span></a>Table of contents</h2>
+
+<ul>
+<li><a href="#quick-start">Quick start</a></li>
+<li><a href="#bugs-and-feature-requests">Bugs and feature requests</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#community">Community</a></li>
+<li><a href="#versioning">Versioning</a></li>
+<li><a href="#creators">Creators</a></li>
+<li><a href="#copyright-and-license">Copyright and license</a></li>
+</ul>
+
+<h2>
+<a id="quick-start" class="anchor" href="#quick-start" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick start</h2>
+
+<p>Three quick start options are available:</p>
+
+<ul>
+<li>
+<a href="https://www.borderroutersec.org">Use the hosted version</a>. </li>
+<li>
+<a href="https://github.com/TedLeRoy/BRST/archive/master.zip">Download the latest release</a>.</li>
+<li>Clone the repo: <code>git clone http://windows.github.com/</code>.</li>
+</ul>
+
+<p>Read the <a href="https://www.borderroutersec.org//index.html">Start Here page</a> for information on how to use the BRST to generate a secure configuration file.</p>
+
+<h3>
+<a id="whats-included" class="anchor" href="#whats-included" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's included</h3>
+
+<p>Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:</p>
+
+<pre><code>brst/
+├── .htaccess
+├── about.html
+├── advanced.html
+├── BRST-favicon-16x16.ico
+├── contact.html
+├── copying.html
+├── crypto-key-generation.html
+├── download.html
+├── faq.html
+├── favicon.ico
+├── index.html
+├── normal.html
+├── README.md
+├── services-and-protocols.html
+├── template.html
+├── troubleshooting.html
+├── css/
+│   ├── bootstrap.css
+│   ├── bootstrap.css.map
+│   ├── bootstrap.min.css
+│   ├── bootstrap.min2.css
+│   ├── bootstrap2.css
+│   ├── bootstrap-theme.css
+│   ├── bootstrap-theme.css.map
+│   ├── bootstrap-theme.min.css
+│   ├── bootswatch.min.css
+│   ├── index.html
+├── fonts/
+│   ├── glyphicons-halflings-regular.eot
+│   ├── glyphicons-halflings-regular.svg
+│   ├── glyphicons-halflings-regular.ttf
+│   ├── glyphicons-halflings-regular.woff
+│   ├── glyphicons-halflings-regular.woff2
+│   ├── index.html
+├── img/
+│   ├── brst-brand.png
+│   ├── BRST-favicon-32x32.png
+│   ├── brst-logo.png
+│   ├── brst-logo-big.png
+│   ├── index.html
+├── js/
+│   ├── bootstrap.js
+│   ├── bootstrap.min.js
+│   ├── bootswatch.js
+│   ├── brst.js
+│   ├── index.html
+│   ├── jquery-1.102.min.js
+│   ├── npm.js
+
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>We provide compiled CSS and JS (<code>bootstrap.*</code>), as well as compiled and minified CSS and JS (<code>bootstrap.min.*</code>). CSS <a href="https://developers.google.com/chrome-developer-tools/docs/css-preprocessors">source maps</a> (<code>bootstrap.*.map</code>) are available for use with certain browsers' developer tools.</p>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<h2>
+<a id="bugs-and-feature-requests" class="anchor" href="#bugs-and-feature-requests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bugs and feature requests</h2>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Have a bug or a feature request? Please first search <a href="https://github.com/TedLeRoy/BRST/issues">issues</a> for existing and closed issues. If your problem or idea is not addressed yet, <a href="https://github.com/TedLeRoy/BRST/issues">please open a new issue</a>.</p>
 
-<h3>
-<a id="rather-drive-stick" class="anchor" href="#rather-drive-stick" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>The BRST's documentation is integrated into the site via the Help pages and links to them throughout the web pages.</p>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>Participation in the project is welcome. The following areas help make the project more useful to everyone:</p>
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<ul>
+<li>Reporting issues (See Bugs and feature requests above).</li>
+<li>Requesting features (See Bugs and feature requests above).</li>
+<li>Implementing changes
 
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<ul>
+<li>Create a clone of the main branch</li>
+<li>Add your changes and test</li>
+<li>Create a <a href="https://github.com/TedLeRoy/BRST/pulls">pull request</a>
+</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+<a id="community" class="anchor" href="#community" aria-hidden="true"><span class="octicon octicon-link"></span></a>Community</h2>
+
+<p>Keep track of development and community news.</p>
+
+<ul>
+<li>Follow <a href="https://twitter.com/borderroutersec">@BorderRouterSec on Twitter</a>.</li>
+<li>Read and subscribe to <a href="https://github.com/TedLeRoy/BRST/wiki/About-the-BRST-Project">The Official BRST Wiki</a>.</li>
+</ul>
+
+<h2>
+<a id="versioning" class="anchor" href="#versioning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Versioning</h2>
+
+<p>Not fully implemented yet, but will likely be maintained under <a href="http://semver.org/">the Semantic Versioning guidelines</a>.</p>
+
+<h2>
+<a id="creator" class="anchor" href="#creator" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creator</h2>
+
+<p><strong>Ted LeRoy</strong></p>
+
+<ul>
+<li><a href="https://twitter.com/Ted_LeRoy">https://twitter.com/Ted_LeRoy</a></li>
+<li><a href="https://github.com/TedLeRoy">https://github.com/TedLeRoy</a></li>
+</ul>
+
+<h2>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributors</h2>
+
+<p><strong>Abhi Balakrisnan</strong></p>
+
+<ul>
+<li><a href="https://twitter.com/abhi_m_">https://twitter.com/abhi_m_</a></li>
+<li><a href="https://github.com/Abhi-M/">https://github.com/Abhi-M/</a></li>
+</ul>
+
+<p><strong>Vernon Villanueva</strong></p>
+
+<ul>
+<li><a href="https://twitter.com/vernon_v">https://twitter.com/vernon_v</a></li>
+</ul>
+
+<h2>
+<a id="copyright-and-license" class="anchor" href="#copyright-and-license" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copyright and license</h2>
+
+<p>Code and documentation copyright 2007-2015 Ted LeRoy. Code released <a href="http://www.gnu.org/licenses/agpl-3.0.html">GNU Affero General Public License</a>. Docs are integrated and are covered under the same license.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/TedLeRoy">TedLeRoy</a></p>
