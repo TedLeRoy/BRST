@@ -144,6 +144,7 @@
                             <a class="list-group-item" href="#tcp_keepalives_out">tcp-keepalives-out</a>
                             <a class="list-group-item" href="#ssh_time_out">ssh timeout</a>
                             <a class="list-group-item" href="#ssh_auth_retries">ssh authentication retries</a>
+							<a class="list-group-item" href="#ip_classless">ip classless</a>
                             <a class="list-group-item" href="#aux2">aux port Configuration</a>
                             <a class="list-group-item" href="#console2">Console Port</a>
                             <a class="list-group-item" href="#vty2">vty ports</a>
@@ -340,6 +341,10 @@
 					entered) can be limited to thwart brute force password cracking attempts.  The
 					brst sets the number of attempts before lockout to three.  <br />
 					<span class="label label-success">Limiting ssh authentication retries is recommended</span> </div></div>
+					
+					<div class="panel panel-default"><div class="panel-body"><a id="#ip_classless" class="anchor"></a><b>ip classless</b><br />The ip classless command causes the router to forward packets for an unknown subnet to a known supernet that contains it.
+					If you disable this feature, and a route is not known for a packet for an unknown destination, it will be dropped.  <br />
+					<span class="label label-success">Enabling ip classless is recommended</span> </div></div>					
 
 					<h3>Access control</h3>
 
