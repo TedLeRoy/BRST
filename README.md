@@ -21,6 +21,8 @@ Three quick start options are available:
 - [Download the latest release](https://github.com/TedLeRoy/BRST/archive/master.zip).
 - Clone the repo: `git clone https://github.com/TedLeRoy/BRST.git`.
 
+The content of the BRST folder should be copied into your web server's site directory, likely /var/www/html.
+
 Read the [Start Here page](https://www.borderroutersec.org//index.html) for information on how to use the BRST to generate a secure configuration file.
 
 ### What's included
