@@ -19,7 +19,7 @@ Three quick start options are available:
 
 - [Use the hosted version] (https://www.borderroutersec.org). 
 - [Download the latest release](https://github.com/TedLeRoy/BRST/archive/master.zip).
-- Clone the repo: `git clone http://windows.github.com/`.
+- Clone the repo: `git clone https://github.com/TedLeRoy/BRST.git`.
 
 Read the [Start Here page](https://www.borderroutersec.org//index.html) for information on how to use the BRST to generate a secure configuration file.
 
