@@ -1,6 +1,6 @@
 The BRST is a web based utility that requests information about your environment and generates a secure Cisco router configuration based on your input.
 
-To get started, check out <https://borderroutersec.org>!
+To get started, check out <https://borderroutersec.com>!
 
 ## Table of contents
 
@@ -17,7 +17,7 @@ To get started, check out <https://borderroutersec.org>!
 
 Three quick start options are available:
 
-- [Use the hosted version] (https://www.borderroutersec.org). 
+- [Use the hosted version] (https://www.borderroutersec.com). 
 - [Download the latest release](https://github.com/TedLeRoy/BRST/archive/master.zip).
 - Clone the repo: `git clone https://github.com/TedLeRoy/BRST.git`.
 
