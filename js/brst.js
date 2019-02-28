@@ -1028,7 +1028,7 @@ function Process() {
 
             }
 
-            confcodeappend("ip route 100.0.0.0 255.192.0.0 null0&#13;&#10;");
+            confcodeappend("ip route 100.64.0.0 255.192.0.0 null0&#13;&#10;");
             confcodeappend("ip route 127.0.0.0 255.0.0.0 null0&#13;&#10;");
             confcodeappend("ip route 169.254.0.0 255.255.0.0 null0&#13;&#10;");
 
@@ -1057,7 +1057,6 @@ function Process() {
 
             }
 
-            confcodeappend("ip route 198.18.100.0 255.254.0.0 null0&#13;&#10;");
             confcodeappend("ip route 198.51.100.0 255.255.255.0 null0&#13;&#10;");
             confcodeappend("ip route 203.0.113.0 255.255.255.0 null0&#13;&#10;");
             confcodeappend("ip route 224.0.0.0 224.0.0.0 null0&#13;&#10;");
